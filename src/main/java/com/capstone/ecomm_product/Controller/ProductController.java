@@ -18,9 +18,14 @@ public class ProductController {
     HTTP -> Tomcat -> DispatcherServlet[loads all URls and handler mappings] -> Servlet Container -> Servlets
  */
 
-    @Autowired
-    @Qualifier("fakeStoreProductService")
+
+
     private ProductService ps;
+
+    @Autowired
+    public ProductController(@Qualifier("fakeStoreProductService") ProductService ps) {
+        this.ps = ps;
+    }
 
     @GetMapping("/products/{id}")
     public ResponseEntity getProductById(@PathVariable("id")int productId){
