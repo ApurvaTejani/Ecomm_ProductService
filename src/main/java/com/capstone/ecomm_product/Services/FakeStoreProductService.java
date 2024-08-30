@@ -2,6 +2,7 @@ package com.capstone.ecomm_product.Services;
 
 import Models.Product;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
+import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
@@ -39,13 +40,20 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public Product createProduct(Product product) {
-        return null;
+    public ProductResponseDTO createProduct(ProductRequestDTO requestDTO) {
+        String url="https://fakestoreapi.com/products";
+        RestTemplate restTemplate=rtb.build();
+        ResponseEntity<ProductResponseDTO> dtoResponseEntity=restTemplate.postForEntity(url,requestDTO,ProductResponseDTO.class);
+        return dtoResponseEntity.getBody();
+
     }
 
     @Override
-    public Product deleteProduct(int id) {
-        return null;
+    public boolean deleteProduct(int id) {
+        String url="https://fakestoreapi.com/products/"+id;
+        RestTemplate restTemplate=rtb.build();
+        restTemplate.delete(url);
+        return true;
     }
 
     @Override
