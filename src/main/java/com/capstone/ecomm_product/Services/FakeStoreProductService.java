@@ -20,7 +20,14 @@ public class FakeStoreProductService implements ProductService{
 
     @Override
     public ProductListResponse getAllProducts() {
-        return null;
+        String url="https://fakestoreapi.com/products";
+         RestTemplate restTemplate=rtb.build();
+         ResponseEntity<ProductResponseDTO[]> productResponseArray=restTemplate.getForEntity(url,ProductResponseDTO[].class);
+         ProductListResponse productList= new ProductListResponse();
+         for (ProductResponseDTO responseDTO:productResponseArray.getBody()){
+             productList.getResponseDTOList().add(responseDTO);
+         }
+         return productList;
     }
 
     @Override

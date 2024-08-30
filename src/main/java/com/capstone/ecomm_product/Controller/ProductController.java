@@ -1,5 +1,6 @@
 package com.capstone.ecomm_product.Controller;
 
+import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import com.capstone.ecomm_product.Services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,11 @@ public class ProductController {
     public ResponseEntity getProductById(@PathVariable("id")int productId){
         ProductResponseDTO responseDTO=ps.getProductById(productId);
        return ResponseEntity.ok(responseDTO);
+    }
+
+    @GetMapping("/products")
+    public ResponseEntity getAllProducts(){
+        ProductListResponse productListResponse=ps.getAllProducts();
+        return ResponseEntity.ok(productListResponse);
     }
 }
