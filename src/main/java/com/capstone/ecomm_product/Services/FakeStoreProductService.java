@@ -1,6 +1,7 @@
 package com.capstone.ecomm_product.Services;
 
 import Models.Product;
+import com.capstone.ecomm_product.Client.FakeStoreAPI;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
@@ -15,9 +16,13 @@ public class FakeStoreProductService implements ProductService{
 
     private RestTemplateBuilder rtb;
 
-    public FakeStoreProductService(RestTemplateBuilder rtb) {
+    private FakeStoreAPI apiCall;
+
+    public FakeStoreProductService(RestTemplateBuilder rtb, FakeStoreAPI apiCall) {
         this.rtb = rtb;
+        this.apiCall = apiCall;
     }
+
 
     @Override
     public ProductListResponse getAllProducts() {
@@ -41,10 +46,8 @@ public class FakeStoreProductService implements ProductService{
 
     @Override
     public ProductResponseDTO createProduct(ProductRequestDTO requestDTO) {
-        String url="https://fakestoreapi.com/products";
-        RestTemplate restTemplate=rtb.build();
-        ResponseEntity<ProductResponseDTO> dtoResponseEntity=restTemplate.postForEntity(url,requestDTO,ProductResponseDTO.class);
-        return dtoResponseEntity.getBody();
+        ProductResponseDTO productResponseDTO=apiCall.createProductCallToAPI(requestDTO);
+        return productResponseDTO;
 
     }
 
