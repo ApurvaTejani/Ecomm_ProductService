@@ -6,8 +6,9 @@ import com.capstone.ecomm_product.DTOs.FakeStoreProductResponseDTO;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.ResponseEntity;
+import static  com.capstone.ecomm_product.utils.NullChecks.isNull;
+
+import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,12 +20,11 @@ import static com.capstone.ecomm_product.Mapper.ProductMapper.fakeStoreResponseT
 @Service
 public class FakeStoreProductService implements ProductService{
 
-    private RestTemplateBuilder rtb;
 
     private FakeStoreAPI apiCall;
 
-    public FakeStoreProductService(RestTemplateBuilder rtb, FakeStoreAPI apiCall) {
-        this.rtb = rtb;
+    public FakeStoreProductService( FakeStoreAPI apiCall) {
+
         this.apiCall = apiCall;
     }
 
@@ -40,8 +40,12 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public ProductResponseDTO getProductById(int id) {
+    public ProductResponseDTO getProductById(int id) throws ProductNotFoundException {
         FakeStoreProductResponseDTO fakeStoreProductResponseDTO=apiCall.getProductById(id);
+        if(isNull(fakeStoreProductResponseDTO))
+        {
+            throw new ProductNotFoundException("Product Not Found with id :"+id);
+        }
         return fakeStoreResponseToProductResponse(fakeStoreProductResponseDTO);
     }
 

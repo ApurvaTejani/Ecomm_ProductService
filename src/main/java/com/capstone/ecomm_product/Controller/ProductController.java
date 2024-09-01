@@ -3,6 +3,7 @@ package com.capstone.ecomm_product.Controller;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
+import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import com.capstone.ecomm_product.Services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,7 +28,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/{id}")
-    public ResponseEntity getProductById(@PathVariable("id")int productId){
+    public ResponseEntity getProductById(@PathVariable("id")int productId) throws ProductNotFoundException {
         ProductResponseDTO responseDTO=ps.getProductById(productId);
        return ResponseEntity.ok(responseDTO);
     }
