@@ -2,6 +2,7 @@ package com.capstone.ecomm_product.Services;
 
 import Models.Product;
 import com.capstone.ecomm_product.Client.FakeStoreAPI;
+import com.capstone.ecomm_product.DTOs.FakeStoreProductResponseDTO;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
@@ -10,6 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.capstone.ecomm_product.Mapper.ProductMapper.fakeStoreResponseToProductResponse;
 
 @Service
 public class FakeStoreProductService implements ProductService{
@@ -26,36 +31,29 @@ public class FakeStoreProductService implements ProductService{
 
     @Override
     public ProductListResponse getAllProducts() {
-        String url="https://fakestoreapi.com/products";
-         RestTemplate restTemplate=rtb.build();
-         ResponseEntity<ProductResponseDTO[]> productResponseArray=restTemplate.getForEntity(url,ProductResponseDTO[].class);
-         ProductListResponse productList= new ProductListResponse();
-         for (ProductResponseDTO responseDTO:productResponseArray.getBody()){
-             productList.getResponseDTOList().add(responseDTO);
-         }
-         return productList;
+       List<FakeStoreProductResponseDTO> fakeStoreProductResponseDTOList=apiCall.getAllProducts();
+      ProductListResponse listResponse= new ProductListResponse();
+      for (FakeStoreProductResponseDTO fakeStoreProductResponseDTO:fakeStoreProductResponseDTOList){
+          listResponse.getResponseDTOList().add(fakeStoreResponseToProductResponse(fakeStoreProductResponseDTO));
+      }
+      return listResponse;
     }
 
     @Override
     public ProductResponseDTO getProductById(int id) {
-        String url="https://fakestoreapi.com/products/"+id;
-        RestTemplate restTemplate= rtb.build();
-        ResponseEntity<ProductResponseDTO> response=restTemplate.getForEntity(url,ProductResponseDTO.class);
-        return response.getBody();
+        FakeStoreProductResponseDTO fakeStoreProductResponseDTO=apiCall.getProductById(id);
+        return fakeStoreResponseToProductResponse(fakeStoreProductResponseDTO);
     }
 
     @Override
     public ProductResponseDTO createProduct(ProductRequestDTO requestDTO) {
-        ProductResponseDTO productResponseDTO=apiCall.createProductCallToAPI(requestDTO);
-        return productResponseDTO;
-
+        FakeStoreProductResponseDTO fakeStoreProductResponseDTO=apiCall.createProductCallToAPI(requestDTO);
+        return fakeStoreResponseToProductResponse(fakeStoreProductResponseDTO);
     }
 
     @Override
     public boolean deleteProduct(int id) {
-        String url="https://fakestoreapi.com/products/"+id;
-        RestTemplate restTemplate=rtb.build();
-        restTemplate.delete(url);
+        apiCall.deleteProduct(id);
         return true;
     }
 
