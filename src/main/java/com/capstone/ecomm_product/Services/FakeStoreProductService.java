@@ -1,6 +1,6 @@
 package com.capstone.ecomm_product.Services;
 
-import Models.Product;
+import com.capstone.ecomm_product.Models.Product;
 import com.capstone.ecomm_product.Client.FakeStoreAPI;
 import com.capstone.ecomm_product.DTOs.FakeStoreProductResponseDTO;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
@@ -10,9 +10,7 @@ import static  com.capstone.ecomm_product.utils.NullChecks.isNull;
 
 import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.capstone.ecomm_product.Mapper.ProductMapper.fakeStoreResponseToProductResponse;

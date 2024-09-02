@@ -1,4 +1,4 @@
-package Models;
+package com.capstone.ecomm_product.Models;
 
 import lombok.Getter;
 import lombok.Setter;
