@@ -2,6 +2,7 @@ package com.capstone.ecomm_product.Models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,12 +10,15 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Product extends BaseClass{
+
     private String title;
-    private double price;
-    @ManyToOne
-    private Category category;
+    @OneToOne
+    private Price price;
     private String description;
     private String image;
-    private String email;
-    private String password;
+
+    @ManyToOne
+    private Category category;
+
+
 }
