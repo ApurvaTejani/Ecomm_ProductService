@@ -1,5 +1,6 @@
 package com.capstone.ecomm_product.Models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -14,6 +15,7 @@ public class Product extends BaseClass{
     private String title;
     @OneToOne
     private Price price;
+    @Column(columnDefinition = "TEXT")
     private String description;
     private String image;
 

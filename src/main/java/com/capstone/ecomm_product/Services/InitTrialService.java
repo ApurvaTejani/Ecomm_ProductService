@@ -1,6 +1,7 @@
 package com.capstone.ecomm_product.Services;
 
 
+import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import com.capstone.ecomm_product.Models.Category;
 import com.capstone.ecomm_product.Models.Order;
 import com.capstone.ecomm_product.Models.Price;
@@ -35,13 +36,13 @@ public class InitTrialService {
         this.prodr = prodr;
     }
 
-    public void initiate(){
+    public void initiate() throws ProductNotFoundException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Category Name");
         String categoryName=sc.nextLine();
         Category c = new Category();
         c.setCategory(categoryName);
-        cr.save(c);
+        c=cr.save(c);
         while(true) {
 
             Product p = new Product();
@@ -59,7 +60,8 @@ public class InitTrialService {
             double amount = sc.nextDouble();
             p1.setAmount(amount);
             p1.setDiscount(0.00);
-            pr.save(p1);
+            p1=pr.save(p1);
+            p.setPrice(p1);
             sc.nextLine();
             System.out.println("DO you want to exit ?");
             String val=sc.nextLine();
@@ -69,13 +71,16 @@ public class InitTrialService {
 
         }
         Order order = new Order();
+        List<Product> productList= new ArrayList<>();
         while (true){
-
+            System.out.println("Enetr the products which you want to add in cart? ");
             String title =sc.nextLine();
             Optional<Product> productOptional = prodr.findByTitle(title);
-            List<Product> productList= new ArrayList<>();
+            if (productOptional.isEmpty()){
+                throw new ProductNotFoundException();
+            }
             productList.add(productOptional.get());
-            System.out.println("Do you want to Exit?");
+            System.out.println("Do you want to Exit Card?");
             String val=sc.nextLine();
             if(val.equalsIgnoreCase("yes")) {
                 order.setProductList(productList);
