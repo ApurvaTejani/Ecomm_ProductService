@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 public class ProductController {
 
@@ -23,13 +25,14 @@ public class ProductController {
     private ProductService ps;
 
     @Autowired
-    public ProductController(@Qualifier("fakeStoreProductService") ProductService ps) {
+    public ProductController(@Qualifier("initTrialService") ProductService ps) {
         this.ps = ps;
     }
 
     @GetMapping("/products/{id}")
-    public ResponseEntity getProductById(@PathVariable("id")int productId) throws ProductNotFoundException {
-        ProductResponseDTO responseDTO=ps.getProductById(productId);
+    public ResponseEntity getProductById(@PathVariable("id")String productId) throws ProductNotFoundException {
+        UUID uuid= UUID.fromString(productId);
+        ProductResponseDTO responseDTO=ps.getProductById(uuid);
        return ResponseEntity.ok(responseDTO);
     }
 
@@ -46,8 +49,12 @@ public class ProductController {
     }
 
     @DeleteMapping("/products/{id}")
-    public ResponseEntity deleteProduct(@PathVariable("id")int id){
-        boolean responseStatus=ps.deleteProduct(id);
+    public ResponseEntity deleteProduct(@PathVariable("id")String productId) throws ProductNotFoundException {
+        UUID uuid= UUID.fromString(productId);
+        boolean responseStatus=ps.deleteProduct(uuid);
         return ResponseEntity.ok(responseStatus);
     }
+
+
 }
+

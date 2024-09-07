@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.UUID;
 
 import static com.capstone.ecomm_product.Mapper.ProductMapper.productRequestToFakeStoreProductRequest;
 
@@ -37,7 +38,7 @@ public class FakeStoreAPI {
         return dtoResponseEntity.getBody();
     }
 
-    public FakeStoreProductResponseDTO getProductById(int id){
+    public FakeStoreProductResponseDTO getProductById(UUID id){
         String getProductURL=fakeStoreURL+productPath+"/"+id;
         RestTemplate restTemplate= rtb.build();
         ResponseEntity<FakeStoreProductResponseDTO> response=restTemplate.getForEntity(getProductURL,FakeStoreProductResponseDTO.class);
@@ -53,7 +54,7 @@ public class FakeStoreAPI {
         return List.of(fakeStoreProductsArray.getBody());
     }
 
-    public void deleteProduct(int id){
+    public void deleteProduct(UUID id){
         String deleteURL=fakeStoreURL+productPath+"/"+id;
         RestTemplate restTemplate=rtb.build();
         restTemplate.delete(deleteURL);

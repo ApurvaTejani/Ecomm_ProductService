@@ -1,9 +1,9 @@
 package com.capstone.ecomm_product.Mapper;
 
-import com.capstone.ecomm_product.DTOs.FakeStoreProductRequestDTO;
-import com.capstone.ecomm_product.DTOs.FakeStoreProductResponseDTO;
-import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
-import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
+import com.capstone.ecomm_product.DTOs.*;
+import com.capstone.ecomm_product.Models.Product;
+
+import java.util.List;
 
 public class ProductMapper {
 
@@ -24,8 +24,35 @@ public class ProductMapper {
         productResponseDTO.setTitle(fakeStoreProductResponseDTO.getTitle());
         productResponseDTO.setPrice(fakeStoreProductResponseDTO.getPrice());
         productResponseDTO.setImage(fakeStoreProductResponseDTO.getImage());
-        productResponseDTO.setId(fakeStoreProductResponseDTO.getId());
+//        productResponseDTO.setId(fakeStoreProductResponseDTO.getId());
         productResponseDTO.setDescription(fakeStoreProductResponseDTO.getDescription());
         return productResponseDTO;
+    }
+
+    public static ProductListResponse convertProductListToProductListResponse(List<Product> products){
+        ProductListResponse productListResponse = new ProductListResponse();
+        for (Product p: products){
+            ProductResponseDTO responseDTO = new ProductResponseDTO();
+            responseDTO.setId(p.getId());
+            responseDTO.setDescription(p.getDescription());
+            responseDTO.setTitle(p.getTitle());
+            responseDTO.setCategory(p.getCategory().getCategory());
+            responseDTO.setImage(p.getImage());
+            responseDTO.setPrice(p.getPrice().getAmount());
+            productListResponse.getResponseDTOList().add(responseDTO);
+        }
+        return productListResponse;
+
+    }
+
+    public static ProductResponseDTO convertProductToProductResponse(Product p){
+        ProductResponseDTO responseDTO= new ProductResponseDTO();
+        responseDTO.setId(p.getId());
+        responseDTO.setPrice(p.getPrice().getAmount());
+        responseDTO.setTitle(p.getTitle());
+        responseDTO.setCategory(p.getCategory().getCategory());
+        responseDTO.setImage(p.getImage());
+        responseDTO.setDescription(p.getDescription());
+        return responseDTO;
     }
 }

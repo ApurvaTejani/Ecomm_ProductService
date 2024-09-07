@@ -6,13 +6,15 @@ import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 
+import java.util.UUID;
+
 public interface ProductService {
 
 
      ProductListResponse getAllProducts();
-     ProductResponseDTO getProductById(int id) throws ProductNotFoundException;
+     ProductResponseDTO getProductById(UUID id) throws ProductNotFoundException;
      ProductResponseDTO createProduct(ProductRequestDTO requestDTO);
-     boolean deleteProduct(int id);
+     boolean deleteProduct(UUID id) throws ProductNotFoundException;
      Product updateProduct(int id,Product updateProduct);
 
 }

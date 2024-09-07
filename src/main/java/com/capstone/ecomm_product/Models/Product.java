@@ -1,9 +1,6 @@
 package com.capstone.ecomm_product.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +17,7 @@ public class Product extends BaseClass{
     private String image;
 
     @ManyToOne
+    @JoinColumn(name = "category_id")
     private Category category;
 
 

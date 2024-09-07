@@ -1,6 +1,9 @@
 package com.capstone.ecomm_product.Services;
 
 
+import com.capstone.ecomm_product.DTOs.ProductListResponse;
+import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
+import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import com.capstone.ecomm_product.Models.Category;
 import com.capstone.ecomm_product.Models.Order;
@@ -11,14 +14,15 @@ import com.capstone.ecomm_product.Repositories.OrderRepository;
 import com.capstone.ecomm_product.Repositories.PriceRepository;
 import com.capstone.ecomm_product.Repositories.ProductRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
+
+import static com.capstone.ecomm_product.Mapper.ProductMapper.convertProductListToProductListResponse;
+import static com.capstone.ecomm_product.Mapper.ProductMapper.convertProductToProductResponse;
 
 @Service
-public class InitTrialService {
+public class InitTrialService implements ProductService{
 
 
     private CategoryRepository cr;
@@ -40,9 +44,16 @@ public class InitTrialService {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Category Name");
         String categoryName=sc.nextLine();
-        Category c = new Category();
-        c.setCategory(categoryName);
-        c=cr.save(c);
+        Optional<Category>categoryOptional=cr.findByCategory(categoryName);
+        Category c;
+        if(categoryOptional.isEmpty()) {
+             c = new Category();
+            c.setCategory(categoryName);
+            c = cr.save(c);
+        }
+        else {
+             c =categoryOptional.get();
+        }
         while(true) {
 
             Product p = new Product();
@@ -91,5 +102,67 @@ public class InitTrialService {
 
 
 
+    }
+
+    @Override
+    public ProductListResponse getAllProducts() {
+        List<Product> products = prodr.findAll();
+        ProductListResponse productListResponse=convertProductListToProductListResponse(products);
+        return productListResponse;
+    }
+
+    @Override
+    public ProductResponseDTO getProductById(UUID id) throws ProductNotFoundException {
+
+        Optional<Product> productOptional=prodr.findById(id);
+        if(productOptional.isEmpty()){
+            throw new ProductNotFoundException();
+        }
+        ProductResponseDTO responseDTO= convertProductToProductResponse(productOptional.get());
+
+        return responseDTO;
+    }
+
+    @Override
+    public ProductResponseDTO createProduct(ProductRequestDTO requestDTO) {
+        Product p = new Product();
+        Price p1 = new Price();
+        p1.setAmount(requestDTO.getPrice());
+        p1.setDiscount(0.00);
+        p1.setCurrency(requestDTO.getCurrency());
+        p1=pr.save(p1);
+        p.setPrice(p1);
+        Category c;
+        Optional<Category> categoryOptional =cr.findByCategory(requestDTO.getCategory());
+        if(categoryOptional.isEmpty()) {
+             c = new Category();
+            c.setCategory(requestDTO.getCategory());
+            c=cr.save(c);
+        }
+        else {
+            c=categoryOptional.get();
+        }
+        p.setCategory(c);
+        p.setImage(requestDTO.getImage());
+        p.setDescription(requestDTO.getDescription());
+        p.setTitle(requestDTO.getTitle());
+        p=prodr.save(p);
+
+return convertProductToProductResponse(p);
+    }
+
+    @Override
+    public boolean deleteProduct(UUID id) throws ProductNotFoundException {
+        try {
+            prodr.deleteById(id);
+        } catch (Exception e){
+            throw new ProductNotFoundException();
+        }
+        return true;
+    }
+
+    @Override
+    public Product updateProduct(int id, Product updateProduct) {
+        return null;
     }
 }

@@ -12,6 +12,7 @@ import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 import static com.capstone.ecomm_product.Mapper.ProductMapper.fakeStoreResponseToProductResponse;
 
@@ -38,7 +39,7 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public ProductResponseDTO getProductById(int id) throws ProductNotFoundException {
+    public ProductResponseDTO getProductById(UUID id) throws ProductNotFoundException {
         FakeStoreProductResponseDTO fakeStoreProductResponseDTO=apiCall.getProductById(id);
         if(isNull(fakeStoreProductResponseDTO))
         {
@@ -54,7 +55,7 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public boolean deleteProduct(int id) {
+    public boolean deleteProduct(UUID id) {
         apiCall.deleteProduct(id);
         return true;
     }

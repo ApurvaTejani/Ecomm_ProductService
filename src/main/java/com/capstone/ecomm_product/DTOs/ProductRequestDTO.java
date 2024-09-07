@@ -11,4 +11,5 @@ public class ProductRequestDTO {
     private String category;
     private String description;
     private String image;
+    private String currency;
 }
