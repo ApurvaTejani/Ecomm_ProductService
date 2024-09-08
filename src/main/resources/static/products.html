@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4;">
+<h1 style="text-align: center; margin-bottom: 20px;">Product Listing</h1>
+<div id="product-list" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+
+<script>
+  // Fetch the product data from the API
+  fetch('http://localhost:8081/products')
+          .then(response => response.json())
+          .then(data => {
+            const productList = document.getElementById('product-list');
+            const products = data.responseDTOList;
+
+            // Dynamically generate HTML for each product
+            products.forEach(product => {
+              const productCard = document.createElement('div');
+              productCard.style.cssText = `
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        width: 300px;
+                        margin: 15px;
+                        padding: 20px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.2s ease-in-out;
+                    `;
+
+              productCard.onmouseover = function() {
+                productCard.style.transform = "scale(1.05)";
+              };
+              productCard.onmouseout = function() {
+                productCard.style.transform = "scale(1)";
+              };
+
+              productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.title}" style="width: 100%; height: auto; border-bottom: 1px solid #ddd; margin-bottom: 15px;">
+                        <h2 style="font-size: 18px; margin: 10px 0;">${product.title}</h2>
+                        <p style="font-size: 14px; color: #888; margin-bottom: 10px;">${product.category}</p>
+                        <p style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 15px;">Price: ₹${product.price}</p>
+                        <p style="font-size: 14px; color: #666;">${product.description}</p>
+                    `;
+
+              productList.appendChild(productCard);
+            });
+          })
+          .catch(error => console.error('Error fetching products:', error));
+</script>
+</body>
+</html>
