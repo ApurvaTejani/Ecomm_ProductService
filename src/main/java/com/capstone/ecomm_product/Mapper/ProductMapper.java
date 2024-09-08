@@ -36,7 +36,7 @@ public class ProductMapper {
             responseDTO.setId(p.getId());
             responseDTO.setDescription(p.getDescription());
             responseDTO.setTitle(p.getTitle());
-            responseDTO.setCategory(p.getCategory().getCategory());
+            responseDTO.setCategory(p.getCategory().getCategoryName());
             responseDTO.setImage(p.getImage());
             responseDTO.setPrice(p.getPrice().getAmount());
             productListResponse.getResponseDTOList().add(responseDTO);
@@ -50,7 +50,7 @@ public class ProductMapper {
         responseDTO.setId(p.getId());
         responseDTO.setPrice(p.getPrice().getAmount());
         responseDTO.setTitle(p.getTitle());
-        responseDTO.setCategory(p.getCategory().getCategory());
+        responseDTO.setCategory(p.getCategory().getCategoryName());
         responseDTO.setImage(p.getImage());
         responseDTO.setDescription(p.getDescription());
         return responseDTO;

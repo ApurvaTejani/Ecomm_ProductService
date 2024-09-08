@@ -14,7 +14,6 @@ import com.capstone.ecomm_product.Repositories.OrderRepository;
 import com.capstone.ecomm_product.Repositories.PriceRepository;
 import com.capstone.ecomm_product.Repositories.ProductRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 
@@ -22,7 +21,7 @@ import static com.capstone.ecomm_product.Mapper.ProductMapper.convertProductList
 import static com.capstone.ecomm_product.Mapper.ProductMapper.convertProductToProductResponse;
 
 @Service
-public class InitTrialService implements ProductService{
+public class ProductServiceImpl implements ProductService{
 
 
     private CategoryRepository cr;
@@ -33,7 +32,7 @@ public class InitTrialService implements ProductService{
 
     private ProductRepository prodr;
 
-    public InitTrialService(CategoryRepository cr, OrderRepository or, PriceRepository pr, ProductRepository prodr) {
+    public ProductServiceImpl(CategoryRepository cr, OrderRepository or, PriceRepository pr, ProductRepository prodr) {
         this.cr = cr;
         this.or = or;
         this.pr = pr;
@@ -44,11 +43,11 @@ public class InitTrialService implements ProductService{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Category Name");
         String categoryName=sc.nextLine();
-        Optional<Category>categoryOptional=cr.findByCategory(categoryName);
+        Optional<Category>categoryOptional=cr.findByCategoryName(categoryName);
         Category c;
         if(categoryOptional.isEmpty()) {
              c = new Category();
-            c.setCategory(categoryName);
+            c.setCategoryName(categoryName);
             c = cr.save(c);
         }
         else {
@@ -133,10 +132,11 @@ public class InitTrialService implements ProductService{
         p1=pr.save(p1);
         p.setPrice(p1);
         Category c;
-        Optional<Category> categoryOptional =cr.findByCategory(requestDTO.getCategory());
+        Optional<Category> categoryOptional =cr.findByCategoryName(requestDTO.getCategory());
         if(categoryOptional.isEmpty()) {
              c = new Category();
-            c.setCategory(requestDTO.getCategory());
+            c.setCategoryName(requestDTO.getCategory());
+            c.setCategoryAddedAt(new Date());
             c=cr.save(c);
         }
         else {
@@ -146,6 +146,7 @@ public class InitTrialService implements ProductService{
         p.setImage(requestDTO.getImage());
         p.setDescription(requestDTO.getDescription());
         p.setTitle(requestDTO.getTitle());
+        p.setProductAddedAt(new Date());
         p=prodr.save(p);
 
 return convertProductToProductResponse(p);

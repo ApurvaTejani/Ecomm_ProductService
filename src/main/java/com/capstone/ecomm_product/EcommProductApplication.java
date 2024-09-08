@@ -1,6 +1,6 @@
 package com.capstone.ecomm_product;
 
-import com.capstone.ecomm_product.Services.InitTrialService;
+import com.capstone.ecomm_product.Services.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EcommProductApplication implements CommandLineRunner {
 
-    private InitTrialService trialService;
+    private ProductServiceImpl trialService;
 
-    public EcommProductApplication(InitTrialService trialService) {
+    public EcommProductApplication(ProductServiceImpl trialService) {
         this.trialService = trialService;
     }
 

@@ -6,13 +6,16 @@ import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
 public class Category extends BaseClass {
-    private String category;
+    private String categoryName;
+
+    private Date categoryAddedAt;
     @OneToMany(mappedBy = "category")
     private List<Product> productList;
 }

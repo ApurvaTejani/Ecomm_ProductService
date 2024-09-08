@@ -25,7 +25,7 @@ public class ProductController {
     private ProductService ps;
 
     @Autowired
-    public ProductController(@Qualifier("initTrialService") ProductService ps) {
+    public ProductController(@Qualifier("productServiceImpl") ProductService ps) {
         this.ps = ps;
     }
 
