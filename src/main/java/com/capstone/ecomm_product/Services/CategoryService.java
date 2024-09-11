@@ -1,0 +1,26 @@
+package com.capstone.ecomm_product.Services;
+
+import com.capstone.ecomm_product.DTOs.*;
+import com.capstone.ecomm_product.Exception.CategoryNotFoundException;
+import com.capstone.ecomm_product.Models.Category;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.UUID;
+
+
+@Service
+public interface CategoryService {
+
+     CategoryListResponse getAllCategories();
+
+     CategoryResponseDTO getCategoryById(UUID id) throws CategoryNotFoundException;
+
+     void deleteCategoryById(UUID id);
+
+     CategoryResponseDTO updateCategoryById(UUID id, CategoryRequestDTO requestDTO) throws CategoryNotFoundException;
+
+     CategoryResponseDTO createProduct(CategoryRequestDTO requestDTO);
+
+     ProductListResponse findAllProductsUnderCategory(UUID id);
+}

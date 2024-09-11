@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/products")
 public class ProductController {
 
     /*
@@ -29,26 +30,26 @@ public class ProductController {
         this.ps = ps;
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity getProductById(@PathVariable("id")String productId) throws ProductNotFoundException {
         UUID uuid= UUID.fromString(productId);
         ProductResponseDTO responseDTO=ps.getProductById(uuid);
        return ResponseEntity.ok(responseDTO);
     }
 
-    @GetMapping("/products")
+    @GetMapping
     public ResponseEntity getAllProducts(){
         ProductListResponse productListResponse=ps.getAllProducts();
         return ResponseEntity.ok(productListResponse);
     }
 
-    @PostMapping("/products")
+    @PostMapping
     public ResponseEntity createProucts(@RequestBody ProductRequestDTO requestDTO){
         ProductResponseDTO responseDTO=ps.createProduct(requestDTO);
         return ResponseEntity.ok(responseDTO);
     }
 
-    @DeleteMapping("/products/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteProduct(@PathVariable("id")String productId) throws ProductNotFoundException {
         UUID uuid= UUID.fromString(productId);
         boolean responseStatus=ps.deleteProduct(uuid);
