@@ -4,6 +4,7 @@ import com.capstone.ecomm_product.DTOs.*;
 import com.capstone.ecomm_product.Models.Product;
 
 import java.util.List;
+import java.util.UUID;
 
 public class ProductMapper {
 
@@ -54,5 +55,9 @@ public class ProductMapper {
         responseDTO.setImage(p.getImage());
         responseDTO.setDescription(p.getDescription());
         return responseDTO;
+    }
+    public static Product convertProductRequestToProduct(UUID id,ProductRequestDTO requestDTO){
+
+        return null;
     }
 }

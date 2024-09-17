@@ -1,5 +1,6 @@
 package com.capstone.ecomm_product.Services;
 
+import com.capstone.ecomm_product.Exception.ResourceNotFoundException;
 import com.capstone.ecomm_product.Models.Product;
 import com.capstone.ecomm_product.Client.FakeStoreAPI;
 import com.capstone.ecomm_product.DTOs.FakeStoreProductResponseDTO;
@@ -8,7 +9,6 @@ import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import static  com.capstone.ecomm_product.utils.NullChecks.isNull;
 
-import com.capstone.ecomm_product.Exception.ProductNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,11 +39,11 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public ProductResponseDTO getProductById(UUID id) throws ProductNotFoundException {
+    public ProductResponseDTO getProductById(UUID id) throws ResourceNotFoundException {
         FakeStoreProductResponseDTO fakeStoreProductResponseDTO=apiCall.getProductById(id);
         if(isNull(fakeStoreProductResponseDTO))
         {
-            throw new ProductNotFoundException("Product Not Found with id :"+id);
+            throw new ResourceNotFoundException("Product","Product ID",id);
         }
         return fakeStoreResponseToProductResponse(fakeStoreProductResponseDTO);
     }
@@ -61,7 +61,9 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public Product updateProduct(int i, Product updateProduct) {
+    public ProductResponseDTO updateProduct(UUID id, ProductRequestDTO updateProduct) {
         return null;
     }
+
+
 }

@@ -1,7 +1,8 @@
 package com.capstone.ecomm_product.Services;
 
 import com.capstone.ecomm_product.DTOs.*;
-import com.capstone.ecomm_product.Exception.CategoryNotFoundException;
+
+import com.capstone.ecomm_product.Exception.ResourceNotFoundException;
 import com.capstone.ecomm_product.Models.Category;
 import com.capstone.ecomm_product.Models.Product;
 import com.capstone.ecomm_product.Repositories.CategoryRepository;
@@ -36,25 +37,31 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public CategoryResponseDTO getCategoryById(UUID id) throws CategoryNotFoundException {
+    public CategoryResponseDTO getCategoryById(UUID id) throws ResourceNotFoundException {
         Optional<Category> categoryOptional=cr.findById(id);
         if(categoryOptional.isPresent()){
           CategoryResponseDTO responseDTO=  convertCategoryToCategoryResponse(categoryOptional.get());
           return responseDTO;
         }
         else {
-            throw new CategoryNotFoundException("Category Not Found "+id);
+            throw new ResourceNotFoundException("Category","categoryId",id);
         }
 
     }
 
     @Override
     public void deleteCategoryById(UUID id) {
-        cr.deleteById(id);
+        Optional<Category> category=cr.findById(id);
+        if(category.isPresent()) {
+            cr.deleteById(id);
+        }
+        else {
+            throw new ResourceNotFoundException("Category","Category ID",id);
+        }
     }
 
     @Override
-    public CategoryResponseDTO updateCategoryById(UUID id, CategoryRequestDTO categoryRequestDTO) throws CategoryNotFoundException {
+    public CategoryResponseDTO updateCategoryById(UUID id, CategoryRequestDTO categoryRequestDTO) throws ResourceNotFoundException {
         Optional<Category> categoryOptional=cr.findById(id);
         if(categoryOptional.isPresent()){
             Category c = convertCategoryRequestDTOtoCategory(categoryRequestDTO);
@@ -64,12 +71,13 @@ public class CategoryServiceImpl implements CategoryService{
             return convertCategoryToCategoryResponse(category);
         }
         else {
-            throw new CategoryNotFoundException("Category Not Found "+id);
+            throw new ResourceNotFoundException("Category","categoryId",id);
         }
     }
 
     @Override
     public CategoryResponseDTO createProduct(CategoryRequestDTO requestDTO) {
+
         Category category= convertCategoryRequestDTOtoCategory(requestDTO);
         category=cr.save(category);
         return convertCategoryToCategoryResponse(category);
@@ -78,6 +86,9 @@ public class CategoryServiceImpl implements CategoryService{
     @Override
     public ProductListResponse findAllProductsUnderCategory(UUID id) {
         List<Product> productList =pr.findAllByCategoryId(id);
+        if(productList.isEmpty()){
+            throw new ResourceNotFoundException("Category","Category Id","does not have any product associated to it or Id itself does not exists in DB");
+        }
         return convertProductListToProductListResponse(productList);
     }
 }

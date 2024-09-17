@@ -108,16 +108,14 @@
 <div id="error-message" class="error-message"></div>
 
 <script>
-  // Fetch and display the list of products when the button is pressed
   document.getElementById('list-btn').addEventListener('click', function() {
     const productList = document.getElementById('product-list');
-    productList.style.display = 'block';  // Show the product list
+    productList.style.display = 'block';
     fetchProducts();
   });
 
-  // Function to fetch and display products
   function fetchProducts() {
-    fetch('http://localhost:8081/products')
+    fetch('http://localhost:8081/api/public/products')
             .then(response => response.json())
             .then(data => {
               const productList = document.getElementById('product-list');
@@ -138,10 +136,11 @@
                 productList.appendChild(productCard);
               });
             })
-            .catch(error => console.error('Error fetching products:', error));
+            .catch(error => {
+              alert('Error fetching products: ' + error.message);
+            });
   }
 
-  // Create a new product
   document.getElementById('product-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const productId = document.getElementById('productId').value;
@@ -154,36 +153,46 @@
     };
 
     if (productId) {
-      updateProduct(productId, productData);  // Update product if ID is provided
+      updateProduct(productId, productData);
     } else {
-      // Create new product
-      fetch('http://localhost:8081/products', {
+      fetch('http://localhost:8081/api/admin/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(productData)
       })
-              .then(response => response.json())
+              .then(response => {
+                if (!response.ok) {
+                  return response.json().then(err => { throw new Error(err.message); });
+                }
+                return response.json();
+              })
               .then(() => {
                 alert('Product created successfully!');
                 fetchProducts();
                 document.getElementById('product-form').reset();
               })
-              .catch(error => console.error('Error creating product:', error));
+              .catch(error => {
+                alert('Error creating product: ' + error.message);
+              });
     }
   });
 
-  // Update an existing product
   function updateProduct(id, data) {
-    fetch(`http://localhost:8081/products/${id}`, {
+    fetch(`http://localhost:8081/api/admin/products/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
-            .then(response => response.json())
+            .then(response => {
+              if (!response.ok) {
+                return response.json().then(err => { throw new Error(err.message); });
+              }
+              return response.json();
+            })
             .then(() => {
               alert('Product updated successfully!');
               fetchProducts();
@@ -191,10 +200,11 @@
               document.getElementById('save-btn').style.display = 'block';
               document.getElementById('update-btn').style.display = 'none';
             })
-            .catch(error => console.error('Error updating product:', error));
+            .catch(error => {
+              alert('Error updating product: ' + error.message);
+            });
   }
 
-  // Pre-fill the form with product details for editing
   function editProduct(id, title, price, category, description, image) {
     document.getElementById('productId').value = id;
     document.getElementById('title').value = title;
@@ -207,20 +217,20 @@
     document.getElementById('update-btn').style.display = 'block';
   }
 
-  // Delete a product
   function deleteProduct(id) {
     if (confirm('Are you sure you want to delete this product?')) {
-      fetch(`http://localhost:8081/products/${id}`, {
+      fetch(`http://localhost:8081/api/admin/products/${id}`, {
         method: 'DELETE'
       })
-              .then(response => response.json())
-              .then(() => {
+              .then(response => {
+                if (!response.ok) {
+                  return response.json().then(err => { throw new Error(err.message); });
+                }
                 alert('Product deleted successfully!');
                 fetchProducts();
               })
               .catch(error => {
-                const errorMessage = document.getElementById('error-message');
-                errorMessage.textContent = 'Error deleting product: ' + error.message;
+                alert('Error deleting product: ' + error.message);
               });
     }
   }
