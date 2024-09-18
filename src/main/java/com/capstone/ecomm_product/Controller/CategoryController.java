@@ -7,6 +7,7 @@ import com.capstone.ecomm_product.Exception.*;
 import com.capstone.ecomm_product.Services.CategoryService;
 import jakarta.validation.Valid;
 import jakarta.validation.ConstraintViolationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@Slf4j
 @RequestMapping("/api")
 public class CategoryController {
 
@@ -30,42 +32,42 @@ public class CategoryController {
 
     @GetMapping("/public/categories")
     public ResponseEntity<CategoryListResponse> getAllCategories(){
+        log.info("Attempting to get all category details");
    CategoryListResponse categoryListResponse=cs.getAllCategories();
+        log.info("Category Details retrieved successfully");
    return ResponseEntity.ok(categoryListResponse );
     }
 
 
     @GetMapping("/public/categories/{id}")
     public ResponseEntity<CategoryResponseDTO> getCategoryById(@PathVariable("id") UUID id) {
-
+            log.info("Attempting to get category details for id {} clicked",id);
             CategoryResponseDTO categoryResponseDTO = cs.getCategoryById(id);
+            log.info("Successfully retrieved category with id {}",id);
             return ResponseEntity.ok(categoryResponseDTO);
-
     }
 
     @DeleteMapping("/admin/categories/{id}")
     public ResponseEntity<Boolean> deleteCategoryById(@PathVariable("id") UUID id){
+        log.info("Attempting to delete a product with id: {}", id);
         cs.deleteCategoryById(id);
         return ResponseEntity.ok(true);
     }
 
     @PutMapping("/admin/categories/{id}")
-    public ResponseEntity<CategoryResponseDTO> updateCategoryById(@PathVariable("id") UUID id,@RequestBody CategoryRequestDTO requestDTO)  {
-
+    public ResponseEntity<CategoryResponseDTO> updateCategoryById(@PathVariable("id") UUID id,@Valid @RequestBody CategoryRequestDTO requestDTO)  {
+            log.info("Attempting to edit  category with id: {}", id);
             CategoryResponseDTO responseDTO = cs.updateCategoryById(id, requestDTO);
             return ResponseEntity.ok(responseDTO);
     }
 
     @PostMapping("/admin/categories")
     public ResponseEntity<CategoryResponseDTO> createCategory(@Valid @RequestBody CategoryRequestDTO requestDTO) throws BadRequestClient {
-        try {
-            CategoryResponseDTO responseDTO = cs.createProduct(requestDTO);
-            return ResponseEntity.ok(responseDTO);
-        }
-        catch (TransactionSystemException e){
-            throw new BadRequestClient("Category","Category Name",requestDTO.getCategoryName());
-        }
 
+            log.info("Attempting to create a new category with data: {}", requestDTO);
+            CategoryResponseDTO responseDTO = cs.createProduct(requestDTO);
+            log.info("Category created successfully with ID: {}", responseDTO.getId());
+            return ResponseEntity.ok(responseDTO);
     }
 
 @GetMapping("/public/categories/{id}/products")

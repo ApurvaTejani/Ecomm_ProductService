@@ -40,6 +40,7 @@ public class ProductMapper {
             responseDTO.setCategory(p.getCategory().getCategoryName());
             responseDTO.setImage(p.getImage());
             responseDTO.setPrice(p.getPrice().getAmount());
+            responseDTO.setCurrency(p.getPrice().getCurrency());
             productListResponse.getResponseDTOList().add(responseDTO);
         }
         return productListResponse;
@@ -50,6 +51,7 @@ public class ProductMapper {
         ProductResponseDTO responseDTO= new ProductResponseDTO();
         responseDTO.setId(p.getId());
         responseDTO.setPrice(p.getPrice().getAmount());
+        responseDTO.setCurrency(p.getPrice().getCurrency());
         responseDTO.setTitle(p.getTitle());
         responseDTO.setCategory(p.getCategory().getCategoryName());
         responseDTO.setImage(p.getImage());

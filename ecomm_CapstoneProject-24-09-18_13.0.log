@@ -1,0 +1,266 @@
+24-09-18 13:03:24.372 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-18 13:03:24.439 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 1976 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-18 13:03:24.442 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-18 13:03:24.520 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-18 13:03:24.521 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-18 13:03:25.735 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-18 13:03:25.831 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces. 
+24-09-18 13:03:26.551 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-18 13:03:26.565 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:03:26.569 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-18 13:03:26.570 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-18 13:03:26.647 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-18 13:03:26.648 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2126 ms 
+24-09-18 13:03:26.856 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-18 13:03:26.955 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-18 13:03:27.022 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-18 13:03:27.467 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-18 13:03:27.508 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-18 13:03:27.975 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2180a648 
+24-09-18 13:03:27.977 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-18 13:03:28.049 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-18 13:03:29.534 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-18 13:03:29.660 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:03:30.290 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-18 13:03:30.322 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-18 13:03:30.735 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-18 13:03:30.759 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:03:30.782 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-18 13:03:30.798 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 6.857 seconds (process running for 9.209) 
+24-09-18 13:03:50.019 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-18 13:03:50.019 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-18 13:03:50.021 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+24-09-18 13:04:38.148 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-18 13:04:38.390 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-18 13:05:31.904 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:05:31.911 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-18 13:05:31.926 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-18 13:05:38.468 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-18 13:05:38.533 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 10800 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-18 13:05:38.535 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-18 13:05:38.600 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-18 13:05:38.601 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-18 13:05:39.527 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-18 13:05:39.612 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces. 
+24-09-18 13:05:40.269 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-18 13:05:40.282 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:05:40.285 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-18 13:05:40.286 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-18 13:05:40.347 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-18 13:05:40.347 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1746 ms 
+24-09-18 13:05:40.540 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-18 13:05:40.610 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-18 13:05:40.657 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-18 13:05:41.076 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-18 13:05:41.108 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-18 13:05:41.463 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4355b044 
+24-09-18 13:05:41.466 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-18 13:05:41.533 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-18 13:05:43.058 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-18 13:05:43.184 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:05:43.827 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-18 13:05:43.850 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-18 13:05:44.223 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-18 13:05:44.253 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:05:44.275 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-18 13:05:44.285 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 6.229 seconds (process running for 7.551) 
+24-09-18 13:05:53.726 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-18 13:05:53.726 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-18 13:05:53.726 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+24-09-18 13:05:55.592 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-18 13:05:55.836 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-18 13:07:39.248 [http-nio-8081-exec-6] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-18 13:07:39.296 [http-nio-8081-exec-6] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-18 13:09:37.918 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:09:37.921 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-18 13:09:37.927 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-18 13:09:42.416 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-18 13:09:42.450 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 35188 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-18 13:09:42.450 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-18 13:09:42.496 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-18 13:09:42.496 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-18 13:09:43.082 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-18 13:09:43.129 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces. 
+24-09-18 13:09:43.549 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-18 13:09:43.549 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:09:43.549 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-18 13:09:43.549 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-18 13:09:43.596 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-18 13:09:43.596 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1099 ms 
+24-09-18 13:09:43.705 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-18 13:09:43.753 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-18 13:09:43.778 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-18 13:09:44.034 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-18 13:09:44.066 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-18 13:09:44.285 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29c56347 
+24-09-18 13:09:44.285 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-18 13:09:44.349 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-18 13:09:45.229 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-18 13:09:45.307 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:09:45.657 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-18 13:09:45.673 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-18 13:09:45.876 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-18 13:09:45.891 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:09:45.907 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-18 13:09:45.907 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 3.775 seconds (process running for 4.636) 
+24-09-18 13:09:55.436 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-18 13:09:55.436 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-18 13:09:55.437 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+24-09-18 13:09:56.713 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-18 13:09:56.832 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-18 13:14:37.104 [http-nio-8081-exec-5] INFO  c.c.e.Controller.ProductController - Attempting to create a new product with data: com.capstone.ecomm_product.DTOs.ProductRequestDTO@1b841e98 
+24-09-18 13:14:37.104 [http-nio-8081-exec-5] INFO  c.c.e.Services.ProductServiceImpl - Starting product creation for product price: 449.0 
+24-09-18 13:14:37.104 [http-nio-8081-exec-5] INFO  c.c.e.Services.ProductServiceImpl - Saving price details: amount=449.0, currency=INR) 
+24-09-18 13:14:37.183 [http-nio-8081-exec-5] ERROR c.c.e.Services.ProductServiceImpl - Category not found: Men's Clothing 
+24-09-18 13:14:37.183 [http-nio-8081-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.capstone.ecomm_product.Exception.ResourceNotFoundException: Category having CategoryName - Reason Men's Clothing] 
+24-09-18 13:14:46.518 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-18 13:14:46.531 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-18 13:14:48.833 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@3c67f5ec 
+24-09-18 13:14:48.836 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Men's Clothing 
+24-09-18 13:14:48.860 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: c2fcd43f-e0e9-43ef-84ac-0471c44d81b8 
+24-09-18 13:14:48.860 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: c2fcd43f-e0e9-43ef-84ac-0471c44d81b8 
+24-09-18 13:14:50.084 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-18 13:14:50.092 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-18 13:14:54.997 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to create a new product with data: com.capstone.ecomm_product.DTOs.ProductRequestDTO@5c784ab8 
+24-09-18 13:14:54.997 [http-nio-8081-exec-2] INFO  c.c.e.Services.ProductServiceImpl - Starting product creation for product price: 449.0 
+24-09-18 13:14:54.997 [http-nio-8081-exec-2] INFO  c.c.e.Services.ProductServiceImpl - Saving price details: amount=449.0, currency=INR) 
+24-09-18 13:14:55.008 [http-nio-8081-exec-2] INFO  c.c.e.Services.ProductServiceImpl - Category found: Men's Clothing 
+24-09-18 13:14:55.008 [http-nio-8081-exec-2] INFO  c.c.e.Services.ProductServiceImpl - Saving product: title=ADRO Men's Regular Fit T-Shirt, description=Wash Care : Do Not Bleach, Wash it with similar colours, Machine wash cold, Dry in Shade. 
+24-09-18 13:14:55.013 [http-nio-8081-exec-2] INFO  c.c.e.Services.ProductServiceImpl - Product created successfully with ID: ce588a1f-a190-4ff6-b601-7ee31d49c726 
+24-09-18 13:14:55.013 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product created successfully with ID: ce588a1f-a190-4ff6-b601-7ee31d49c726 
+24-09-18 13:14:56.028 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-18 13:14:56.081 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-18 13:21:44.269 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-18 13:21:44.274 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-18 13:21:46.732 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@3eefb46d 
+24-09-18 13:21:46.733 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
+24-09-18 13:21:46.741 [http-nio-8081-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] with root cause 
+jakarta.validation.ConstraintViolationException: Validation failed for classes [com.capstone.ecomm_product.Models.Category] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Category Name should be minimum of 5', propertyPath=categoryName, rootBeanClass=class com.capstone.ecomm_product.Models.Category, messageTemplate='Category Name should be minimum of 5'}
+]
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:151)
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:81)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:251)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:106)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:371)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy135.save(Unknown Source)
+	at com.capstone.ecomm_product.Services.CategoryServiceImpl.createProduct(CategoryServiceImpl.java:102)
+	at com.capstone.ecomm_product.Controller.CategoryController.createCategory(CategoryController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+24-09-18 13:24:31.505 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:24:31.510 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-18 13:24:31.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-18 13:24:38.326 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-18 13:24:38.379 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 33696 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-18 13:24:38.380 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-18 13:24:38.442 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-18 13:24:38.442 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-18 13:24:39.365 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-18 13:24:39.456 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces. 
+24-09-18 13:24:40.167 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-18 13:24:40.178 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:24:40.181 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-18 13:24:40.182 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-18 13:24:40.249 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-18 13:24:40.250 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1807 ms 
+24-09-18 13:24:40.465 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-18 13:24:40.548 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-18 13:24:40.608 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-18 13:24:41.187 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-18 13:24:41.232 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-18 13:24:41.686 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76308b6d 
+24-09-18 13:24:41.691 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-18 13:24:41.783 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-18 13:24:43.573 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-18 13:24:43.704 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-18 13:24:44.418 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-18 13:24:44.458 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-18 13:24:44.837 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-18 13:24:44.862 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-18 13:24:44.885 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-18 13:24:44.896 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 7.009 seconds (process running for 8.364) 
+24-09-18 13:24:48.421 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-18 13:24:48.422 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-18 13:24:48.424 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+24-09-18 13:24:48.557 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@36593902 
+24-09-18 13:24:48.718 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
+24-09-18 13:24:48.798 [http-nio-8081-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 
+24-09-18 13:24:56.407 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-18 13:24:56.450 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-18 13:25:01.046 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@48eaa0a1 
+24-09-18 13:25:01.051 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
+24-09-18 13:25:01.055 [http-nio-8081-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 

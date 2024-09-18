@@ -70,7 +70,7 @@ public class ProductServiceImpl implements ProductService{
         p1.setAmount(requestDTO.getPrice());
         p1.setDiscount(0.00);
         p1.setCurrency(requestDTO.getCurrency());
-        log.info("Saving price details: amount={}, currency=INR", requestDTO.getPrice());
+        log.info("Saving price details: amount={}, currency={})", requestDTO.getPrice(),requestDTO.getCurrency());
         p1=pr.save(p1);
         p.setPrice(p1);
         Category c;

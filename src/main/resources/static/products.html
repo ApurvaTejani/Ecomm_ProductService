@@ -87,6 +87,9 @@
     <label for="price">Price:</label>
     <input type="number" id="price" placeholder="Enter product price" required>
 
+    <label for="currency">Currency:</label>
+    <input type="text" id="currency" placeholder="Enter Currency" required>
+
     <label for="category">Category:</label>
     <input type="text" id="category" placeholder="Enter product category" required>
 
@@ -126,7 +129,7 @@
                 productCard.innerHTML = `
                             <img src="${product.image}" alt="${product.title}" style="max-width: 100%; height: auto; border-radius: 8px;">
                             <h3>${product.title}</h3>
-                            <p><strong>Price:</strong> ${product.price}</p>
+                            <p><strong>Price:</strong> ${product.price} ${product.currency}</p>
                             <p><strong>Category:</strong> ${product.category}</p>
                             <p><strong>Description:</strong> ${product.description}</p>
                             <p>ID: ${product.id}</p>
@@ -149,7 +152,8 @@
       price: document.getElementById('price').value,
       category: document.getElementById('category').value,
       description: document.getElementById('description').value,
-      image: document.getElementById('image').value
+      image: document.getElementById('image').value,
+      currency: document.getElementById('currency').value
     };
 
     if (productId) {
@@ -205,13 +209,14 @@
             });
   }
 
-  function editProduct(id, title, price, category, description, image) {
+  function editProduct(id, title, price, category, description, image,currency) {
     document.getElementById('productId').value = id;
     document.getElementById('title').value = title;
     document.getElementById('price').value = price;
     document.getElementById('category').value = category;
     document.getElementById('description').value = description;
     document.getElementById('image').value = image;
+    document.getElementById('currency').value= currency;
 
     document.getElementById('save-btn').style.display = 'none';
     document.getElementById('update-btn').style.display = 'block';

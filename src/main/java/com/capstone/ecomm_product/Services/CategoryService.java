@@ -1,6 +1,7 @@
 package com.capstone.ecomm_product.Services;
 
 import com.capstone.ecomm_product.DTOs.*;
+import com.capstone.ecomm_product.Exception.BadRequestClient;
 import com.capstone.ecomm_product.Exception.ResourceNotFoundException;
 import com.capstone.ecomm_product.Models.Category;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public interface CategoryService {
 
      CategoryResponseDTO updateCategoryById(UUID id, CategoryRequestDTO requestDTO);
 
-     CategoryResponseDTO createProduct(CategoryRequestDTO requestDTO);
+     CategoryResponseDTO createProduct(CategoryRequestDTO requestDTO) throws BadRequestClient;
 
      ProductListResponse findAllProductsUnderCategory(UUID id);
 }
