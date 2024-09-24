@@ -70,10 +70,19 @@ public class CategoryController {
             return ResponseEntity.ok(responseDTO);
     }
 
-@GetMapping("/public/categories/{id}/products")
-        public ResponseEntity<List<ProductResponseDTO>> findAllProductsUnderCategory(@PathVariable("id") UUID id) {
-            ProductListResponse productResponseDTOList=cs.findAllProductsUnderCategory(id);
-            return ResponseEntity.ok(productResponseDTOList.getResponseDTOList());
-        }
+    @GetMapping("/public/categories/id/{id}/products")
+    public ResponseEntity<List<ProductResponseDTO>> findAllProductsUnderCategory(@PathVariable("id") UUID id) {
+        log.info("Attempting to get Products details for category id {} clicked",id);
+        ProductListResponse productResponseDTOList = cs.findAllProductsUnderCategory(id);
+        return ResponseEntity.ok(productResponseDTOList.getResponseDTOList());
     }
+
+
+    @GetMapping("/public/categories/{name}/products")
+    public ResponseEntity<List<ProductResponseDTO>> findAllProductsUnderCategoryName(@PathVariable("name") String name){
+        log.info("Attempting to get Products details for category name {} clicked",name);
+        ProductListResponse productListResponse=cs.findAllProductsUnderCategoryName(name);
+        return ResponseEntity.ok(productListResponse.getResponseDTOList());
+        }
+     }
 

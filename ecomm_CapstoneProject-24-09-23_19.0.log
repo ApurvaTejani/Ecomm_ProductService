@@ -1,0 +1,54 @@
+24-09-23 19:32:37.779 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-23 19:32:37.874 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 26936 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-23 19:32:37.876 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-23 19:32:37.980 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-23 19:32:37.981 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-23 19:32:39.762 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-23 19:32:39.912 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 129 ms. Found 4 JPA repository interfaces. 
+24-09-23 19:32:40.962 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-23 19:32:40.982 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-23 19:32:40.987 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-23 19:32:40.988 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-23 19:32:41.128 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-23 19:32:41.129 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3145 ms 
+24-09-23 19:32:41.542 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-23 19:32:41.741 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-23 19:32:41.864 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-23 19:32:42.761 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-23 19:32:42.816 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-23 19:32:43.631 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@687fa6ed 
+24-09-23 19:32:43.636 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-23 19:32:43.813 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-23 19:32:46.997 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-23 19:32:47.327 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-23 19:32:48.460 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-23 19:32:48.498 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-23 19:32:49.074 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-23 19:32:49.110 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-23 19:32:49.145 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-23 19:32:49.162 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 11.987 seconds (process running for 20.537) 
+24-09-23 19:32:50.267 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-23 19:32:50.267 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-23 19:32:50.270 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+24-09-23 19:32:50.380 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category name Health Supplements clicked 
+24-09-23 19:32:50.381 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category name Health Supplements from DB 
+24-09-23 19:32:50.731 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 7860be78-2ce4-4e8b-936a-6c780fdd59b8 from DB 
+24-09-23 19:32:50.791 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category id 7860be78-2ce4-4e8b-936a-6c780fdd59b8 found 
+24-09-23 19:32:50.793 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category name Health Supplements found 
+24-09-23 19:33:09.685 [http-nio-8081-exec-3] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category name Toys clicked 
+24-09-23 19:33:09.685 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category name Toys from DB 
+24-09-23 19:33:09.692 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 from DB 
+24-09-23 19:33:09.717 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 found 
+24-09-23 19:33:09.718 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category name Toys found 
+24-09-23 19:33:25.497 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category id 0b62d6c5-e21a-4881-8598-99e8acfa4b2f clicked 
+24-09-23 19:33:25.497 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 0b62d6c5-e21a-4881-8598-99e8acfa4b2f from DB 
+24-09-23 19:33:25.522 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category id 0b62d6c5-e21a-4881-8598-99e8acfa4b2f found 
+24-09-23 19:33:31.979 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category id 0b62d6c5-e21a-4881-8598-99e8acfa4b4f clicked 
+24-09-23 19:33:31.979 [http-nio-8081-exec-5] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 0b62d6c5-e21a-4881-8598-99e8acfa4b4f from DB 
+24-09-23 19:33:31.987 [http-nio-8081-exec-5] ERROR c.c.e.Services.CategoryServiceImpl - Category ID with 0b62d6c5-e21a-4881-8598-99e8acfa4b4f does not exists in DB 
+24-09-23 19:33:31.995 [http-nio-8081-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.capstone.ecomm_product.Exception.ResourceNotFoundException: Category having Category Id - Reason does not have any product associated to it or Id itself does not exists in DB] 
+24-09-23 19:34:04.761 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-23 19:34:04.803 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-23 19:34:13.820 [http-nio-8081-exec-7] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-23 19:34:13.902 [http-nio-8081-exec-7] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-23 19:34:33.411 [http-nio-8081-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Error at index 11 in: "99e8acfa4b2g"] 

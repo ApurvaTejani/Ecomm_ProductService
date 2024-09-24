@@ -24,4 +24,6 @@ public interface CategoryService {
      CategoryResponseDTO createProduct(CategoryRequestDTO requestDTO) throws BadRequestClient;
 
      ProductListResponse findAllProductsUnderCategory(UUID id);
+
+     ProductListResponse findAllProductsUnderCategoryName(String categoryName);
 }

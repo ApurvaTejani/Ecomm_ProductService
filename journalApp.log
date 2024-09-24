@@ -1,13 +1,1 @@
-24-09-18 15:09:14.315 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
-24-09-18 15:09:14.328 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
-24-09-18 15:09:28.829 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@4e9067f9 
-24-09-18 15:09:28.839 [http-nio-8081-exec-6] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
-24-09-18 15:09:28.845 [http-nio-8081-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 
-24-09-18 15:09:38.608 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
-24-09-18 15:09:38.617 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
-24-09-18 15:09:42.146 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@5a2b6139 
-24-09-18 15:09:42.151 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
-24-09-18 15:09:42.151 [http-nio-8081-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 
-24-09-18 15:09:48.280 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@62cb14a8 
-24-09-18 15:09:48.280 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
-24-09-18 15:09:48.288 [http-nio-8081-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 
+24-09-24 09:42:05.731 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h9m33s652ms44µs600ns). 

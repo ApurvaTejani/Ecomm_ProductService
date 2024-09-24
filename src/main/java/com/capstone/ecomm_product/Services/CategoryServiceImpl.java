@@ -1,5 +1,6 @@
 package com.capstone.ecomm_product.Services;
 
+
 import com.capstone.ecomm_product.DTOs.*;
 
 import com.capstone.ecomm_product.Exception.APIException;
@@ -10,6 +11,8 @@ import com.capstone.ecomm_product.Models.Product;
 import com.capstone.ecomm_product.Repositories.CategoryRepository;
 import com.capstone.ecomm_product.Repositories.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.html.Option;
@@ -17,6 +20,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import static com.capstone.ecomm_product.Mapper.CategoryMapper.*;
 import static com.capstone.ecomm_product.Mapper.ProductMapper.*;
@@ -27,6 +31,9 @@ public class CategoryServiceImpl implements CategoryService{
 
     private CategoryRepository cr;
     private ProductRepository pr;
+
+    @Autowired
+   private ModelMapper modelMapper;
 
     public CategoryServiceImpl(CategoryRepository cr,ProductRepository pr) {
         this.cr = cr;
@@ -45,9 +52,10 @@ public class CategoryServiceImpl implements CategoryService{
         log.info("Service finding category with category id {} from DB",id);
         Optional<Category> categoryOptional=cr.findById(id);
         if(categoryOptional.isPresent()){
+            CategoryResponseDTO responseDTO1=modelMapper.map(categoryOptional.get(),CategoryResponseDTO.class);
           CategoryResponseDTO responseDTO=  convertCategoryToCategoryResponse(categoryOptional.get());
             log.info("Category with Category id {} found",id);
-          return responseDTO;
+          return responseDTO1;
         }
         else {
             log.error("Category ID with {} does not exists in DB",id);
@@ -107,10 +115,28 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public ProductListResponse findAllProductsUnderCategory(UUID id) {
+        log.info("Service finding products for category id {} from DB",id);
         List<Product> productList =pr.findAllByCategoryId(id);
         if(productList.isEmpty()){
+            log.error("Category ID with {} does not exists in DB",id);
             throw new ResourceNotFoundException("Category","Category Id","does not have any product associated to it or Id itself does not exists in DB");
         }
+        log.info("Products with Category id {} found",id);
         return convertProductListToProductListResponse(productList);
+    }
+
+    @Override
+    public ProductListResponse findAllProductsUnderCategoryName(String categoryName) {
+        log.info("Service finding products for category name {} from DB",categoryName);
+        Optional<Category> categoryOptional=cr.findByCategoryName(categoryName);
+        if (categoryOptional.isEmpty()){
+            log.error("Category name with {} does not exists in DB",categoryName);
+            throw new ResourceNotFoundException("Category","Category Name",categoryName);
+        }
+        else{
+            ProductListResponse productListResponse=findAllProductsUnderCategory(categoryOptional.get().getId());
+            log.info("Products with Category name {} found",categoryName);
+            return productListResponse;
+        }
     }
 }
