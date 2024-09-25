@@ -1,0 +1,260 @@
+24-09-24 11:00:20.098 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-24 11:00:20.192 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 37448 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-24 11:00:20.192 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-24 11:00:20.288 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-24 11:00:20.288 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-24 11:00:21.998 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-24 11:00:22.158 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143 ms. Found 4 JPA repository interfaces. 
+24-09-24 11:00:23.858 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-24 11:00:23.878 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:00:23.888 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-24 11:00:23.888 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-24 11:00:23.988 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-24 11:00:23.988 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3700 ms 
+24-09-24 11:00:24.318 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-24 11:00:24.527 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-24 11:00:24.638 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-24 11:00:25.380 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-24 11:00:25.448 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-24 11:00:26.118 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@228e00ad 
+24-09-24 11:00:26.123 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-24 11:00:26.219 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-24 11:00:28.233 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-24 11:00:28.420 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:00:29.528 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-24 11:00:29.566 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-24 11:00:30.270 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-24 11:00:30.306 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:00:30.335 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-24 11:00:30.348 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 10.799 seconds (process running for 13.521) 
+24-09-24 11:00:33.847 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-24 11:00:33.847 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-24 11:00:33.847 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+24-09-24 11:00:33.918 [http-nio-8081-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:00:57.088 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:00:57.438 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:02:11.762 [http-nio-8081-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:02:16.894 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@4618cce2 
+24-09-24 11:02:16.938 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Furniture 
+24-09-24 11:02:17.046 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 07af3603-f191-4ee5-9199-65cfb15099b6 
+24-09-24 11:02:17.046 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 07af3603-f191-4ee5-9199-65cfb15099b6 
+24-09-24 11:02:18.250 [http-nio-8081-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:02:32.385 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@735644ef 
+24-09-24 11:02:32.387 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Kitchenware & Cookware 
+24-09-24 11:02:32.427 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 1ac17d2f-9a90-4fd3-84a7-fbc5175b5295 
+24-09-24 11:02:32.427 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 1ac17d2f-9a90-4fd3-84a7-fbc5175b5295 
+24-09-24 11:02:33.487 [http-nio-8081-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:02:40.400 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@6cf2edeb 
+24-09-24 11:02:40.407 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Bedding & Linens 
+24-09-24 11:02:40.458 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 677a7969-f905-4a0b-b4c4-c3253c5c40b2 
+24-09-24 11:02:40.458 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 677a7969-f905-4a0b-b4c4-c3253c5c40b2 
+24-09-24 11:02:41.585 [http-nio-8081-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:02:54.570 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@3a7cebf9 
+24-09-24 11:02:54.573 [http-nio-8081-exec-5] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Lighting 
+24-09-24 11:02:54.623 [http-nio-8081-exec-5] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: fac4c40b-393e-4209-bc78-e8a97029997e 
+24-09-24 11:02:54.623 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: fac4c40b-393e-4209-bc78-e8a97029997e 
+24-09-24 11:02:55.795 [http-nio-8081-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:03:04.748 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@6e600ccf 
+24-09-24 11:03:04.751 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Storage & Organization 
+24-09-24 11:03:04.794 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 2d3e27cd-bcd5-49a5-bf9c-692ef7a7ca00 
+24-09-24 11:03:04.794 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 2d3e27cd-bcd5-49a5-bf9c-692ef7a7ca00 
+24-09-24 11:03:05.912 [http-nio-8081-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:03:13.342 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@56c8810a 
+24-09-24 11:03:13.348 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Fitness Equipment 
+24-09-24 11:03:13.397 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 03d0631b-4a35-4c53-a783-3ef6f9be5790 
+24-09-24 11:03:13.398 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 03d0631b-4a35-4c53-a783-3ef6f9be5790 
+24-09-24 11:03:14.740 [http-nio-8081-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:03:20.172 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@1db118e1 
+24-09-24 11:03:20.178 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Outdoor Gear 
+24-09-24 11:03:20.229 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: a59e34fb-b1cd-4bf4-bd80-c88d31742044 
+24-09-24 11:03:20.229 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: a59e34fb-b1cd-4bf4-bd80-c88d31742044 
+24-09-24 11:03:21.290 [http-nio-8081-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:03:30.091 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@c312d84 
+24-09-24 11:03:30.097 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Bicycles & Accessories 
+24-09-24 11:03:30.146 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: a5084192-3f62-40bf-8e61-c0d1df3d1d29 
+24-09-24 11:03:30.147 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: a5084192-3f62-40bf-8e61-c0d1df3d1d29 
+24-09-24 11:03:31.176 [http-nio-8081-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNo' for method parameter type Integer is not present] 
+24-09-24 11:03:37.486 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:03:37.540 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:03:54.009 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:03:54.009 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:12:20.177 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:12:20.179 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-24 11:12:20.184 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-24 11:12:25.641 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-24 11:12:25.693 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 24848 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-24 11:12:25.694 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-24 11:12:25.778 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-24 11:12:25.778 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-24 11:12:26.648 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-24 11:12:26.709 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces. 
+24-09-24 11:12:27.353 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-24 11:12:27.365 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:12:27.368 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-24 11:12:27.368 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-24 11:12:27.423 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-24 11:12:27.423 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1643 ms 
+24-09-24 11:12:27.578 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-24 11:12:27.644 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-24 11:12:27.688 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-24 11:12:28.050 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-24 11:12:28.080 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-24 11:12:28.374 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c8a3182 
+24-09-24 11:12:28.377 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-24 11:12:28.474 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-24 11:12:29.728 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-24 11:12:29.877 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:12:30.350 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-24 11:12:30.366 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-24 11:12:30.595 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-24 11:12:30.610 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:12:30.625 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-24 11:12:30.633 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 5.473 seconds (process running for 6.553) 
+24-09-24 11:12:34.180 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-24 11:12:34.180 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-24 11:12:34.184 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms 
+24-09-24 11:12:41.141 [http-nio-8081-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "AppConstants.PAGE_NO_DEFAULT"] 
+24-09-24 11:12:55.330 [http-nio-8081-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "AppConstants.PAGE_NO_DEFAULT"] 
+24-09-24 11:27:42.553 [http-nio-8081-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "AppConstants.PAGE_NO_DEFAULT"] 
+24-09-24 11:28:48.518 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:28:48.525 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-24 11:28:48.552 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-24 11:28:58.648 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-24 11:28:58.721 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 11944 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-24 11:28:58.723 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-24 11:28:58.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-24 11:28:58.814 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-24 11:29:00.343 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-24 11:29:00.568 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 204 ms. Found 4 JPA repository interfaces. 
+24-09-24 11:29:01.780 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-24 11:29:01.806 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:29:01.811 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-24 11:29:01.811 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-24 11:29:01.933 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-24 11:29:01.934 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3118 ms 
+24-09-24 11:29:02.272 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-24 11:29:02.420 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-24 11:29:02.496 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-24 11:29:03.048 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-24 11:29:03.095 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-24 11:29:03.546 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7638dbfe 
+24-09-24 11:29:03.549 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-24 11:29:03.665 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-24 11:29:05.663 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-24 11:29:05.826 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:29:06.853 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-24 11:29:06.912 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-24 11:29:07.530 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-24 11:29:07.558 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:29:07.584 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-24 11:29:07.600 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 9.571 seconds (process running for 11.367) 
+24-09-24 11:29:10.655 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-24 11:29:10.656 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-24 11:29:10.659 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms 
+24-09-24 11:29:10.741 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:11.049 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:19.440 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:19.458 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:29.847 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@345e7cb3 
+24-09-24 11:29:29.894 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Car Accessories 
+24-09-24 11:29:29.976 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: dfdaad24-1255-42ac-95a9-46a644d19a9b 
+24-09-24 11:29:29.976 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: dfdaad24-1255-42ac-95a9-46a644d19a9b 
+24-09-24 11:29:30.931 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:30.945 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:35.653 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@68b7b995 
+24-09-24 11:29:35.657 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Car Care Products 
+24-09-24 11:29:35.698 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 2d7602d4-80bb-426a-8406-551210da5d38 
+24-09-24 11:29:35.698 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 2d7602d4-80bb-426a-8406-551210da5d38 
+24-09-24 11:29:36.608 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:36.626 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:40.768 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@405b6ecd 
+24-09-24 11:29:40.773 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Motorcycle Accessories 
+24-09-24 11:29:40.816 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 4db020ad-dace-4924-ab1e-c111efa9066f 
+24-09-24 11:29:40.816 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 4db020ad-dace-4924-ab1e-c111efa9066f 
+24-09-24 11:29:41.879 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:41.899 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:46.772 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@23049605 
+24-09-24 11:29:46.777 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Fresh Produce 
+24-09-24 11:29:46.787 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 2d4b3579-c2ed-4359-a653-8f714dc39d8b 
+24-09-24 11:29:46.787 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 2d4b3579-c2ed-4359-a653-8f714dc39d8b 
+24-09-24 11:29:47.943 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:47.960 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:29:52.590 [http-nio-8081-exec-3] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@4ee56c 
+24-09-24 11:29:52.590 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Packaged Foods 
+24-09-24 11:29:52.608 [http-nio-8081-exec-3] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 24ab3732-046b-434e-af52-e2f1a9be774d 
+24-09-24 11:29:52.608 [http-nio-8081-exec-3] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 24ab3732-046b-434e-af52-e2f1a9be774d 
+24-09-24 11:29:54.031 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:29:54.055 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:01.928 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@d2d1dbc 
+24-09-24 11:30:01.933 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Beverages 
+24-09-24 11:30:01.974 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 8e641be4-7373-417b-a92a-03d61afa6098 
+24-09-24 11:30:01.974 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 8e641be4-7373-417b-a92a-03d61afa6098 
+24-09-24 11:30:03.069 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:03.101 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:07.859 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@31a770bc 
+24-09-24 11:30:07.863 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Snacks & Confectionery 
+24-09-24 11:30:07.909 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: e182cf12-bf18-4cc5-9bff-6b6c7c694edc 
+24-09-24 11:30:07.909 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: e182cf12-bf18-4cc5-9bff-6b6c7c694edc 
+24-09-24 11:30:08.903 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:08.919 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:13.285 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@5346f9e8 
+24-09-24 11:30:13.289 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Pet Food 
+24-09-24 11:30:13.329 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: fe7258f4-778f-4fb2-a39c-90c0853d9ca0 
+24-09-24 11:30:13.329 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: fe7258f4-778f-4fb2-a39c-90c0853d9ca0 
+24-09-24 11:30:14.333 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:14.351 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:18.233 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@4b84abfc 
+24-09-24 11:30:18.238 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Pet Toys & Accessories 
+24-09-24 11:30:18.287 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: 6986576e-ebac-475d-9cae-92306d6be1c0 
+24-09-24 11:30:18.287 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: 6986576e-ebac-475d-9cae-92306d6be1c0 
+24-09-24 11:30:19.475 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:19.494 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:24.392 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@2681753b 
+24-09-24 11:30:24.397 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: Pet Grooming & Healthcare 
+24-09-24 11:30:24.434 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Category created successfully with ID: b6b8e71b-4a0a-401d-8663-9c09d6c6e45e 
+24-09-24 11:30:24.434 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category created successfully with ID: b6b8e71b-4a0a-401d-8663-9c09d6c6e45e 
+24-09-24 11:30:26.019 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:26.036 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:29.441 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:29.456 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:30:57.094 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:30:57.109 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:38:21.487 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:38:21.494 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-24 11:38:21.561 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-24 11:38:34.637 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-24 11:38:34.717 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 39828 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-24 11:38:34.720 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-24 11:38:34.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-24 11:38:34.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-24 11:38:36.188 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-24 11:38:36.337 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces. 
+24-09-24 11:38:37.418 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-24 11:38:37.421 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:38:37.437 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-24 11:38:37.437 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-24 11:38:37.516 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-24 11:38:37.516 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2702 ms 
+24-09-24 11:38:37.788 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-24 11:38:37.902 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-24 11:38:37.973 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-24 11:38:38.559 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-24 11:38:38.590 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-24 11:38:39.115 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6250ef6a 
+24-09-24 11:38:39.119 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-24 11:38:39.186 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-24 11:38:41.045 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-24 11:38:41.202 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-24 11:38:42.087 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-24 11:38:42.120 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-24 11:38:42.593 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-24 11:38:42.624 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-24 11:38:42.655 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-24 11:38:42.671 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 8.686 seconds (process running for 10.416) 
+24-09-24 11:39:08.054 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-24 11:39:08.055 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-24 11:39:08.055 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+24-09-24 11:39:08.187 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:39:08.587 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-24 11:39:32.911 [http-nio-8081-exec-3] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-24 11:39:32.931 [http-nio-8081-exec-3] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 

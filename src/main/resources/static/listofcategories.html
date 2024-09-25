@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .category-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .category-list li span {
+            font-weight: bold;
+            color: #444;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+        .page-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Product Categories</h1>
+    <ul class="category-list" id="categoryList">
+        <!-- Category items will be dynamically inserted here -->
+    </ul>
+
+    <div class="pagination" id="pagination">
+        <!-- Pagination links will be dynamically inserted here -->
+    </div>
+
+    <div class="page-info" id="pageInfo">
+        <!-- Page info will be displayed here -->
+    </div>
+</div>
+
+<script>
+    // Fetch categories from the Spring Boot API
+    function fetchCategories(pageNo = 0, pageSize = 10, sortBy = 'categoryName', sortOrder = 'asc') {
+        fetch(`http://localhost:8081/api/public/categories?pageNo=${pageNo}&pageSize=${pageSize}&sortBy=${sortBy}&sortOrder=${sortOrder}`)
+            .then(response => response.json())
+            .then(data => {
+                const categoryList = document.getElementById('categoryList');
+                const pagination = document.getElementById('pagination');
+                const pageInfo = document.getElementById('pageInfo');
+
+                // Clear existing content
+                categoryList.innerHTML = '';
+                pagination.innerHTML = '';
+                pageInfo.innerHTML = '';
+
+                // Display categories
+                data.categoryResponseDTOS.forEach(category => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<span>${category.categoryName}</span><span>ID: ${category.id}</span>`;
+                    categoryList.appendChild(li);
+                });
+
+                // Pagination info
+                if (!data.lastPage) {
+                    const nextPage = document.createElement('a');
+                    nextPage.href = '#';
+                    nextPage.innerText = 'Next';
+                    nextPage.onclick = () => fetchCategories(pageNo + 1, pageSize, sortBy, sortOrder);
+                    pagination.appendChild(nextPage);
+                }
+                if (pageNo > 0) {
+                    const prevPage = document.createElement('a');
+                    prevPage.href = '#';
+                    prevPage.innerText = 'Previous';
+                    prevPage.onclick = () => fetchCategories(pageNo - 1, pageSize, sortBy, sortOrder);
+                    pagination.appendChild(prevPage);
+                }
+
+                // Page info
+                pageInfo.innerText = `Page ${data.pageNumber + 1} of ${data.totalPage}, Total Categories: ${data.totalElements}`;
+            })
+            .catch(error => console.error('Error fetching categories:', error));
+    }
+
+    // Initial fetch
+    fetchCategories();
+</script>
+
+</body>
+</html>

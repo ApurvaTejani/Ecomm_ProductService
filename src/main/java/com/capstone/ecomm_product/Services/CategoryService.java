@@ -13,7 +13,7 @@ import java.util.UUID;
 @Service
 public interface CategoryService {
 
-     CategoryListResponse getAllCategories();
+     CategoryListResponse getAllCategories(Integer pageNo, Integer pageSize,String sortBy,String sortOrder);
 
      CategoryResponseDTO getCategoryById(UUID id) throws ResourceNotFoundException;
 

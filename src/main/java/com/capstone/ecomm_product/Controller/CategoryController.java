@@ -1,6 +1,7 @@
 package com.capstone.ecomm_product.Controller;
 
 
+import com.capstone.ecomm_product.Config.AppConstants;
 import com.capstone.ecomm_product.DTOs.*;
 import com.capstone.ecomm_product.Exception.*;
 
@@ -31,9 +32,12 @@ public class CategoryController {
     }
 
     @GetMapping("/public/categories")
-    public ResponseEntity<CategoryListResponse> getAllCategories(){
+    public ResponseEntity<CategoryListResponse> getAllCategories(@RequestParam(name="pageNo", required = false,defaultValue=AppConstants.PAGE_NO_DEFAULT) Integer pageNo,
+                                                                 @RequestParam (name="pageSize",required = false,defaultValue = AppConstants.PAGE_SIZE_DEFAULT) Integer pageSize,
+                                                                 @RequestParam(name="sortBy",required = false,defaultValue = AppConstants.sortBy) String sortBy,
+                                                                 @RequestParam(name = "sortOrder",required = false,defaultValue = AppConstants.sortOrder) String sortOrder){
         log.info("Attempting to get all category details");
-   CategoryListResponse categoryListResponse=cs.getAllCategories();
+        CategoryListResponse categoryListResponse=cs.getAllCategories(pageNo,pageSize,sortBy,sortOrder);
         log.info("Category Details retrieved successfully");
    return ResponseEntity.ok(categoryListResponse );
     }

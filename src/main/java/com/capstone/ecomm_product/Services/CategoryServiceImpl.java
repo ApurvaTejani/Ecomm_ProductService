@@ -13,6 +13,10 @@ import com.capstone.ecomm_product.Repositories.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.html.Option;
@@ -41,9 +45,22 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public CategoryListResponse getAllCategories() {
-        List<Category> categoryList=cr.findAll();
-        CategoryListResponse categoryListResponse = convertCategoryListToCategoryListResponseDTO(categoryList);
+    public CategoryListResponse getAllCategories(Integer pageNo, Integer pageSize,String sortBy,String sortOrder) {
+        Sort sortDetails= sortOrder.equalsIgnoreCase("asc")?Sort.by(sortBy).ascending():Sort.by(sortBy).descending();
+        log.info("Getting Categories Details Page Number : {}, Sorted By: {}, Sorting in {}",pageNo+1,sortBy,sortOrder);
+        Pageable pageDetails= PageRequest.of(pageNo,pageSize,sortDetails);
+        Page<Category> categoryPage=cr.findAll(pageDetails);
+        List<Category> categoryList=categoryPage.getContent();
+        List<CategoryResponseDTO> categoryListResponses=categoryList.stream().map(category -> modelMapper.map(category,CategoryResponseDTO.class)).toList();
+        CategoryListResponse categoryListResponse= new CategoryListResponse();
+        categoryListResponse.setCategoryResponseDTOS(categoryListResponses);
+        categoryListResponse.setPageNumber(pageNo);
+        categoryListResponse.setPageSize(pageSize);
+        categoryListResponse.setTotalPage(categoryPage.getTotalPages());
+        categoryListResponse.setTotalElements(categoryPage.getTotalElements());
+        categoryListResponse.setLastPage(categoryPage.isLast());
+        log.info("Successfully retrieved categories");
+//        CategoryListResponse categoryListResponse = convertCategoryListToCategoryListResponseDTO(categoryList);
         return categoryListResponse;
     }
 
