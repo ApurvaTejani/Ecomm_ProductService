@@ -105,44 +105,44 @@
 </div>
 
 <h2>Product Management</h2>
-<button id="list-btn">List of Products</button>
+<!--<button id="list-btn">List of Products</button>-->
 <div id="product-list"></div>
 
 <div id="error-message" class="error-message"></div>
 
 <script>
-  document.getElementById('list-btn').addEventListener('click', function() {
-    const productList = document.getElementById('product-list');
-    productList.style.display = 'block';
-    fetchProducts();
-  });
+  // document.getElementById('list-btn').addEventListener('click', function() {
+  //   const productList = document.getElementById('product-list');
+  //   productList.style.display = 'block';
+  //   fetchProducts();
+  // });
 
-  function fetchProducts() {
-    fetch('http://localhost:8081/api/public/products')
-            .then(response => response.json())
-            .then(data => {
-              const productList = document.getElementById('product-list');
-              productList.innerHTML = '';
-              data.responseDTOList.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.classList.add('product-card');
-                productCard.innerHTML = `
-                            <img src="${product.image}" alt="${product.title}" style="max-width: 100%; height: auto; border-radius: 8px;">
-                            <h3>${product.title}</h3>
-                            <p>ID: ${product.id}</p>
-                            <p><strong>Price:</strong> ${product.price} ${product.currency}</p>
-                            <p><strong>Category:</strong> ${product.category}</p>
-                            <p><strong>Description:</strong> ${product.description}</p>
-                            <button class="edit" onclick="editProduct('${product.id}', '${product.title}', ${product.price}, '${product.category}', '${product.description}', '${product.image}')">Edit</button>
-                            <button class="delete" onclick="deleteProduct('${product.id}')">Delete</button>
-                        `;
-                productList.appendChild(productCard);
-              });
-            })
-            .catch(error => {
-              alert('Error fetching products: ' + error.message);
-            });
-  }
+  // function fetchProducts() {
+  //   fetch('http://localhost:8081/api/public/products')
+  //           .then(response => response.json())
+  //           .then(data => {
+  //             const productList = document.getElementById('product-list');
+  //             productList.innerHTML = '';
+  //             data.responseDTOList.forEach(product => {
+  //               const productCard = document.createElement('div');
+  //               productCard.classList.add('product-card');
+  //               productCard.innerHTML = `
+  //                           <img src="${product.image}" alt="${product.title}" style="max-width: 100%; height: auto; border-radius: 8px;">
+  //                           <h3>${product.title}</h3>
+  //                           <p>ID: ${product.id}</p>
+  //                           <p><strong>Price:</strong> ${product.price} ${product.currency}</p>
+  //                           <p><strong>Category:</strong> ${product.category}</p>
+  //                           <p><strong>Description:</strong> ${product.description}</p>
+  //                           <button class="edit" onclick="editProduct('${product.id}', '${product.title}', ${product.price}, '${product.category}', '${product.description}', '${product.image}')">Edit</button>
+  //                           <button class="delete" onclick="deleteProduct('${product.id}')">Delete</button>
+  //                       `;
+  //               productList.appendChild(productCard);
+  //             });
+  //           })
+  //           .catch(error => {
+  //             alert('Error fetching products: ' + error.message);
+  //           });
+  // }
 
   document.getElementById('product-form').addEventListener('submit', function(event) {
     event.preventDefault();

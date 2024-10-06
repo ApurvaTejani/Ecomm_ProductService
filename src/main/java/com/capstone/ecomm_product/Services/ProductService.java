@@ -13,7 +13,7 @@ import java.util.UUID;
 public interface ProductService {
 
 
-     ProductListResponse getAllProducts();
+     ProductListResponse getAllProducts(Integer pageNo, Integer pageSize,String sortBy, String sortOrder);
      ProductResponseDTO getProductById(UUID id) throws ResourceNotFoundException;
      ProductResponseDTO createProduct(ProductRequestDTO requestDTO) throws ResourceNotFoundException;
      boolean deleteProduct(UUID id) throws ResourceNotFoundException;

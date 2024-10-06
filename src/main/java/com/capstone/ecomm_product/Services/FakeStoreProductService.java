@@ -29,7 +29,7 @@ public class FakeStoreProductService implements ProductService{
 
 
     @Override
-    public ProductListResponse getAllProducts() {
+    public ProductListResponse getAllProducts(Integer pageNo, Integer pageSize,String sortBy, String sortOrder) {
        List<FakeStoreProductResponseDTO> fakeStoreProductResponseDTOList=apiCall.getAllProducts();
       ProductListResponse listResponse= new ProductListResponse();
       for (FakeStoreProductResponseDTO fakeStoreProductResponseDTO:fakeStoreProductResponseDTOList){

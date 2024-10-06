@@ -6,6 +6,7 @@ import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
 import com.capstone.ecomm_product.Exception.BadRequestClient;
 import com.capstone.ecomm_product.Exception.ResourceNotFoundException;
+import com.capstone.ecomm_product.Mapper.ProductMapper;
 import com.capstone.ecomm_product.Models.Category;
 import com.capstone.ecomm_product.Models.Price;
 import com.capstone.ecomm_product.Models.Product;
@@ -14,6 +15,12 @@ import com.capstone.ecomm_product.Repositories.OrderRepository;
 import com.capstone.ecomm_product.Repositories.PriceRepository;
 import com.capstone.ecomm_product.Repositories.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -34,6 +41,9 @@ public class ProductServiceImpl implements ProductService{
 
     private ProductRepository prodr;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     public ProductServiceImpl(CategoryRepository cr, OrderRepository or, PriceRepository pr, ProductRepository prodr) {
         this.cr = cr;
         this.or = or;
@@ -43,10 +53,23 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
-    public ProductListResponse getAllProducts() {
-        List<Product> products = prodr.findAll();
-        ProductListResponse productListResponse=convertProductListToProductListResponse(products);
-        return productListResponse;
+    public ProductListResponse getAllProducts(Integer pageNo, Integer pageSize,String sortBy, String sortOrder) {
+        Sort sortDetails=sortOrder.equalsIgnoreCase("asc")?Sort.by(sortBy).ascending():Sort.by(sortBy).descending();
+        Pageable pageDetails= PageRequest.of(pageNo,pageSize,sortDetails);
+        Page<Product> productPage=prodr.findAll(pageDetails);
+        List<Product> products = productPage.getContent();
+//        List<ProductResponseDTO> productListResponse=products.stream()
+//                .map(product -> modelMapper.map(product,ProductResponseDTO.class)).toList();
+        List<ProductResponseDTO> productListResponse = products.stream()
+                .map(ProductMapper::convertProductToProductResponse).toList();
+        ProductListResponse listResponse= new ProductListResponse();
+        listResponse.setResponseDTOList(productListResponse);
+        listResponse.setPageNumber(pageNo);
+        listResponse.setPageSize(pageSize);
+        listResponse.setTotalElements(productPage.getTotalElements());
+        listResponse.setTotalPage(productPage.getTotalPages());
+        listResponse.setLastPage(productPage.isLast());
+        return listResponse;
     }
 
     @Override

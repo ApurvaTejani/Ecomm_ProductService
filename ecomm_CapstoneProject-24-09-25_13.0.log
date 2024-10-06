@@ -1,0 +1,155 @@
+24-09-25 13:04:07.423 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:04:07.428 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-25 13:04:07.433 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-25 13:04:12.922 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-25 13:04:12.962 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 7020 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-25 13:04:13.000 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-25 13:04:13.047 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-25 13:04:13.047 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-25 13:04:13.822 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-25 13:04:13.888 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces. 
+24-09-25 13:04:14.342 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-25 13:04:14.351 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:04:14.354 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-25 13:04:14.354 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-25 13:04:14.399 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-25 13:04:14.399 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1352 ms 
+24-09-25 13:04:14.517 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-25 13:04:14.567 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-25 13:04:14.597 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-25 13:04:14.887 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-25 13:04:14.908 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-25 13:04:15.164 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65b472e4 
+24-09-25 13:04:15.167 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-25 13:04:15.233 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-25 13:04:16.194 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-25 13:04:16.330 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:04:16.897 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-25 13:04:16.918 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-25 13:04:17.159 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-25 13:04:17.179 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:04:17.194 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-25 13:04:17.202 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 4.564 seconds (process running for 7.494) 
+24-09-25 13:04:28.579 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-25 13:04:28.579 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-25 13:04:28.580 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+24-09-25 13:04:28.839 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:04:29.101 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:04:45.406 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:04:45.434 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:05:06.188 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:05:06.247 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:05:19.682 [http-nio-8081-exec-5] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:05:19.725 [http-nio-8081-exec-5] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:05:23.515 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:05:23.585 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:06:49.062 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:06:49.070 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-25 13:06:49.084 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-25 13:06:55.416 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-25 13:06:55.490 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 18192 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-25 13:06:55.493 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-25 13:06:55.591 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-25 13:06:55.591 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-25 13:06:56.862 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-25 13:06:56.975 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces. 
+24-09-25 13:06:57.858 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-25 13:06:57.880 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:06:57.886 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-25 13:06:57.887 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-25 13:06:57.976 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-25 13:06:57.977 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2384 ms 
+24-09-25 13:06:58.233 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-25 13:06:58.321 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-25 13:06:58.374 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-25 13:06:58.987 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-25 13:06:59.038 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-25 13:06:59.541 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7300e98a 
+24-09-25 13:06:59.545 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-25 13:06:59.621 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-25 13:07:02.024 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-25 13:07:02.255 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:07:03.379 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-25 13:07:03.420 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-25 13:07:03.942 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-25 13:07:03.979 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:07:04.013 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-25 13:07:04.031 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 9.203 seconds (process running for 10.997) 
+24-09-25 13:07:46.521 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-25 13:07:46.522 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-25 13:07:46.524 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+24-09-25 13:07:46.758 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:07:47.168 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:08:53.540 [http-nio-8081-exec-5] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:08:53.578 [http-nio-8081-exec-5] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:08:55.386 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:08:55.463 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:09:01.202 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:09:01.260 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:09:01.594 [http-nio-8081-exec-10] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:09:01.644 [http-nio-8081-exec-10] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:09:01.946 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:09:01.996 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:09:02.123 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:09:02.177 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:09:07.419 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:09:07.451 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:10:20.243 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:10:20.249 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-09-25 13:10:20.263 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-09-25 13:10:26.235 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-09-25 13:10:26.316 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 35628 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-09-25 13:10:26.317 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-09-25 13:10:26.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-09-25 13:10:26.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-09-25 13:10:27.970 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-09-25 13:10:28.134 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 4 JPA repository interfaces. 
+24-09-25 13:10:29.281 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-09-25 13:10:29.315 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:10:29.322 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-09-25 13:10:29.323 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-09-25 13:10:29.431 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-09-25 13:10:29.431 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3015 ms 
+24-09-25 13:10:29.748 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-09-25 13:10:29.877 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-09-25 13:10:29.972 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-09-25 13:10:30.613 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-09-25 13:10:30.676 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-09-25 13:10:31.192 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23966911 
+24-09-25 13:10:31.192 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-09-25 13:10:31.301 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-09-25 13:10:33.444 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-09-25 13:10:33.601 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-09-25 13:10:34.540 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-09-25 13:10:34.564 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-09-25 13:10:35.164 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-09-25 13:10:35.208 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-09-25 13:10:35.231 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-09-25 13:10:35.250 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 9.748 seconds (process running for 11.819) 
+24-09-25 13:10:35.335 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-09-25 13:10:35.335 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-09-25 13:10:35.338 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+24-09-25 13:15:14.491 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-25 13:15:14.494 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: Id, Sorting in asc 
+24-09-25 13:15:14.782 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-09-25 13:15:14.783 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-25 13:15:22.282 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-25 13:15:22.283 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: categoryName, Sorting in asc 
+24-09-25 13:15:22.306 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-09-25 13:15:22.307 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-25 13:15:23.903 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-25 13:15:23.904 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 2, Sorted By: categoryName, Sorting in asc 
+24-09-25 13:15:23.930 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-09-25 13:15:23.931 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-25 13:15:25.297 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-09-25 13:15:25.297 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 3, Sorted By: categoryName, Sorting in asc 
+24-09-25 13:15:25.313 [http-nio-8081-exec-4] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-09-25 13:15:25.314 [http-nio-8081-exec-4] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-09-25 13:15:28.841 [http-nio-8081-exec-6] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:15:28.946 [http-nio-8081-exec-6] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:15:31.937 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:15:31.977 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:15:33.857 [http-nio-8081-exec-8] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:15:33.937 [http-nio-8081-exec-8] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-09-25 13:16:43.028 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-09-25 13:16:43.060 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 

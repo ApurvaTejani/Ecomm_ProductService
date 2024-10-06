@@ -1,5 +1,6 @@
 package com.capstone.ecomm_product.Controller;
 
+import com.capstone.ecomm_product.Config.AppConstants;
 import com.capstone.ecomm_product.DTOs.ProductListResponse;
 import com.capstone.ecomm_product.DTOs.ProductRequestDTO;
 import com.capstone.ecomm_product.DTOs.ProductResponseDTO;
@@ -45,9 +46,12 @@ public class ProductController {
     }
 
     @GetMapping("/public/products")
-    public ResponseEntity getAllProducts(){
+    public ResponseEntity getAllProducts(@RequestParam(name="pageNo", required = false, defaultValue= AppConstants.PAGE_NO_DEFAULT) Integer pageNo,
+                                         @RequestParam (name="pageSize",required = false,defaultValue = AppConstants.PAGE_SIZE_DEFAULT) Integer pageSize,
+                                         @RequestParam(name="sortBy",required = false,defaultValue = AppConstants.sortBy) String sortBy,
+                                         @RequestParam(name = "sortOrder",required = false,defaultValue = AppConstants.sortOrder) String sortOrder){
         log.info("Attempting to get all product details");
-        ProductListResponse productListResponse=ps.getAllProducts();
+        ProductListResponse productListResponse=ps.getAllProducts(pageNo,pageSize,sortBy,sortOrder);
         log.info("Product Details retrieved successfully");
         return ResponseEntity.ok(productListResponse);
     }

@@ -10,7 +10,15 @@ import java.util.List;
 @Setter
 public class ProductListResponse {
     private List<ProductResponseDTO> responseDTOList;
+    private Integer pageNumber;
 
+    private Integer pageSize;
+
+    private Long totalElements;
+
+    private Integer totalPage;
+
+    private boolean lastPage;
     public ProductListResponse() {
         this.responseDTOList = new ArrayList<>();
     }

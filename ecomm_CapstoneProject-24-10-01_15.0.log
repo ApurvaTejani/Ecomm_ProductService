@@ -1,0 +1,8 @@
+24-10-01 15:00:16.191 [http-nio-8081-exec-9] INFO  c.c.e.Controller.ProductController - Attempting to delete a product with id: 025db935-0af1-4d5b-ac65-5e4f72498e1e 
+24-10-01 15:00:16.261 [http-nio-8081-exec-9] INFO  c.c.e.Services.ProductServiceImpl - Product with product id 025db935-0af1-4d5b-ac65-5e4f72498e1e deleted successfully 
+24-10-01 15:00:28.321 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 15:00:28.344 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 15:00:32.121 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 15:00:32.134 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 15:00:36.768 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 15:00:36.838 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 

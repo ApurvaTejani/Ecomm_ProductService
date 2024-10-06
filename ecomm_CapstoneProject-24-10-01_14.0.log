@@ -1,0 +1,95 @@
+24-10-01 14:55:30.271 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final 
+24-10-01 14:55:30.384 [restartedMain] INFO  c.c.e.EcommProductApplication - Starting EcommProductApplication using Java 19.0.2 with PID 5704 (C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product\target\classes started by apurv in C:\Users\apurv\IdeaProjects\CapstoneProject\ecomm_product) 
+24-10-01 14:55:30.386 [restartedMain] INFO  c.c.e.EcommProductApplication - No active profile set, falling back to 1 default profile: "default" 
+24-10-01 14:55:30.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+24-10-01 14:55:30.687 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+24-10-01 14:55:33.948 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-10-01 14:55:34.130 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 159 ms. Found 4 JPA repository interfaces. 
+24-10-01 14:55:35.755 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+24-10-01 14:55:35.783 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+24-10-01 14:55:35.791 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-10-01 14:55:35.792 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+24-10-01 14:55:35.930 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-10-01 14:55:35.931 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5242 ms 
+24-10-01 14:55:36.652 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-10-01 14:55:36.986 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final 
+24-10-01 14:55:37.084 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-10-01 14:55:37.830 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-10-01 14:55:37.893 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-10-01 14:55:38.663 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3edbc511 
+24-10-01 14:55:38.667 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-10-01 14:55:38.809 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-10-01 14:55:41.121 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-10-01 14:55:41.441 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-10-01 14:55:42.549 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-10-01 14:55:42.614 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+24-10-01 14:55:43.220 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+24-10-01 14:55:43.259 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+24-10-01 14:55:43.297 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+24-10-01 14:55:43.314 [restartedMain] INFO  c.c.e.EcommProductApplication - Started EcommProductApplication in 13.86 seconds (process running for 22.634) 
+24-10-01 14:55:50.477 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-10-01 14:55:50.477 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-10-01 14:55:50.480 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+24-10-01 14:55:58.719 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:55:58.721 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: Id, Sorting in asc 
+24-10-01 14:55:59.212 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:55:59.212 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:03.922 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:56:04.050 [http-nio-8081-exec-1] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 14:56:16.816 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:56:16.851 [http-nio-8081-exec-2] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 14:56:32.543 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:56:32.610 [http-nio-8081-exec-3] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 14:56:41.187 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:41.189 [http-nio-8081-exec-6] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:41.210 [http-nio-8081-exec-6] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:41.210 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:42.957 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:42.957 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 2, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:42.977 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:42.977 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:45.134 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:45.134 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 3, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:45.145 [http-nio-8081-exec-8] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:45.145 [http-nio-8081-exec-8] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:47.004 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:47.004 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 2, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:47.023 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:47.024 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:49.166 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:49.167 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:49.184 [http-nio-8081-exec-10] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:49.184 [http-nio-8081-exec-10] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:50.600 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:50.601 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 2, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:50.622 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:50.622 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:56:52.284 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:56:52.284 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 3, Sorted By: categoryName, Sorting in asc 
+24-10-01 14:56:52.297 [http-nio-8081-exec-2] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:56:52.298 [http-nio-8081-exec-2] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:57:09.315 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Attempting to get all category details 
+24-10-01 14:57:09.315 [http-nio-8081-exec-5] INFO  c.c.e.Services.CategoryServiceImpl - Getting Categories Details Page Number : 1, Sorted By: Id, Sorting in asc 
+24-10-01 14:57:09.332 [http-nio-8081-exec-5] INFO  c.c.e.Services.CategoryServiceImpl - Successfully retrieved categories 
+24-10-01 14:57:09.332 [http-nio-8081-exec-5] INFO  c.c.e.Controller.CategoryController - Category Details retrieved successfully 
+24-10-01 14:57:17.821 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Attempting to get category details for id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 clicked 
+24-10-01 14:57:17.822 [http-nio-8081-exec-6] INFO  c.c.e.Services.CategoryServiceImpl - Service finding category with category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 from DB 
+24-10-01 14:57:17.837 [http-nio-8081-exec-6] INFO  c.c.e.Services.CategoryServiceImpl - Category with Category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 found 
+24-10-01 14:57:17.837 [http-nio-8081-exec-6] INFO  c.c.e.Controller.CategoryController - Successfully retrieved category with id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 
+24-10-01 14:57:24.210 [http-nio-8081-exec-7] INFO  c.c.e.Controller.CategoryController - Attempting to create a new category with data: com.capstone.ecomm_product.DTOs.CategoryRequestDTO@1c09890 
+24-10-01 14:57:24.252 [http-nio-8081-exec-7] INFO  c.c.e.Services.CategoryServiceImpl - Starting category creation: ab 
+24-10-01 14:57:24.337 [http-nio-8081-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction] 
+24-10-01 14:57:40.725 [http-nio-8081-exec-9] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 clicked 
+24-10-01 14:57:40.726 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 from DB 
+24-10-01 14:57:40.751 [http-nio-8081-exec-9] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 found 
+24-10-01 14:58:12.345 [http-nio-8081-exec-1] INFO  c.c.e.Controller.CategoryController - Attempting to get Products details for category name Toys clicked 
+24-10-01 14:58:12.345 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category name Toys from DB 
+24-10-01 14:58:12.351 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Service finding products for category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 from DB 
+24-10-01 14:58:12.371 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category id 0de8f7f0-8001-49d1-a4ec-4e223ef6db09 found 
+24-10-01 14:58:12.371 [http-nio-8081-exec-1] INFO  c.c.e.Services.CategoryServiceImpl - Products with Category name Toys found 
+24-10-01 14:59:14.789 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:59:14.838 [http-nio-8081-exec-4] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 14:59:50.611 [http-nio-8081-exec-7] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:59:50.666 [http-nio-8081-exec-7] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
+24-10-01 14:59:59.677 [http-nio-8081-exec-8] INFO  c.c.e.Controller.ProductController - Attempting to get all product details 
+24-10-01 14:59:59.739 [http-nio-8081-exec-8] INFO  c.c.e.Controller.ProductController - Product Details retrieved successfully 
